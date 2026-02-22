@@ -1,0 +1,26 @@
+# Aula 1 - IA Aplicada
+
+## 📚 Ementa
+
+Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machine Learning, Deep Learning e Large Language Models (LLMs). Aborda conceitos de redes neurais, embeddings, tensores, attention e transformers, com aplicação em projetos de desenvolvimento web e automação inteligente. Explora o uso de frameworks, IDEs e ferramentas assistidas por IA, bem como a integração de agentes autônomos e bancos vetoriais em aplicações práticas.
+
+## 📖 Conteúdo Programático
+
+### 1. Fundamentos de Machine Learning, Deep Learning e Redes Neurais
+
+### 2. Estrutura e funcionamento dos LLMs e transformers
+
+### 3. Engenharia de prompt e ferramentas inteligentes para desenvolvedores
+
+### 4. Implementação prática de modelos e agentes em JavaScript
+
+## 📂 Projetos
+
+### Módulo 2
+
+- **[DetectarCartasComTeachablemachine](Modulo%202/DetectarCartasComTeachablemachine/)** - Detector de Cartas de Truco com TensorFlow.js e Teachable Machine
+- **[DetectarFrutasTensorflow](Modulo%202/DetectarFrutasTensorflow/)** - Detector de Frutas com TensorFlow.js
+
+---
+
+Desenvolvido com ❤️ para o curso de IA Aplicada
