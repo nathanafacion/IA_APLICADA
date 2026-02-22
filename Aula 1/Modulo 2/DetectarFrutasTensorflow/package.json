@@ -1,0 +1,20 @@
+{
+  "name": "fruit-detection-system",
+  "version": "1.0.0",
+  "description": "Sistema de reconhecimento de frutas com TensorFlow.js e Next.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@tensorflow/tfjs": "^4.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46"
+  }
+}

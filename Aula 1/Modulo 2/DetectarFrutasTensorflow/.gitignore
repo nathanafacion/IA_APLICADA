@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+node_modules
+package-lock.json
+yarn.lock
+npm-debug.log*
+
+# Next.js
+.next/
+out/
+.next
+
+# Production
+build/
+dist/
+
+# Dados de Treinamento (imagens grandes)
+Dados/
+Data/
+dados/
+data/
+
+# Model
+model/
+*.h5
+public/model/
+
+# Misc
+.DS_Store
+*.log
+.env
+.env.local
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+desktop.ini

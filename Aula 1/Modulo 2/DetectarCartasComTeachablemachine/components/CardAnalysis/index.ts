@@ -1,0 +1,1 @@
+export { CardAnalysis } from "./CardAnalysis";
