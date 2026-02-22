@@ -16,10 +16,14 @@ Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machin
 
 ## 📂 Projetos
 
-### Módulo 2
+### Módulo 2 - Detecção de Imagens
 
 - **[DetectarCartasComTeachablemachine](Modulo%202/DetectarCartasComTeachablemachine/)** - Detector de Cartas de Truco com TensorFlow.js e Teachable Machine
 - **[DetectarFrutasTensorflow](Modulo%202/DetectarFrutasTensorflow/)** - Detector de Frutas com TensorFlow.js
+
+### Módulo 3 - Sistemas de Recomendação
+
+- **[RecomendaBoardgame](Modulo%203/RecomendaBoardgame/)** - Sistema de Recomendação de Jogos de Tabuleiro com TensorFlow.js e Next.js
 
 ---
 

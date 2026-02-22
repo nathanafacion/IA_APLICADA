@@ -14,7 +14,7 @@ Pós-Graduação em IA Aplicada oferecida pela UNIP.
 
 ## Estrutura do Repositório
 
-### Aula 1 / Módulo 2
+### Aula 1 / Módulo 2 - Detecção de Imagens
 
 #### 📁 DetectarCartasComTeachablemachine
 
@@ -30,12 +30,24 @@ Projeto de classificação de frutas utilizando TensorFlow.
 - Tecnologias: Next.js, React, TensorFlow
 - Funcionalidade: Identificação e classificação de diferentes tipos de frutas
 
+### Aula 1 / Módulo 3 - Sistemas de Recomendação
+
+#### 📁 RecomendaBoardgame
+
+Sistema de recomendação de jogos de tabuleiro (board games) utilizando TensorFlow.js.
+
+- Tecnologias: Next.js, React, TypeScript, TensorFlow.js, Tailwind CSS, Web Workers
+- Funcionalidade: Recomendações inteligentes baseadas em similaridade de cosseno
+- Características: Treinamento no navegador, persistência com IndexedDB, interface com autocomplete
+
 ## Tecnologias Utilizadas
 
 - **Machine Learning:** TensorFlow, TensorFlow.js, Teachable Machine
 - **Frontend:** Next.js, React, TypeScript
 - **Styling:** Tailwind CSS
 - **Computer Vision:** Image Recognition, Classification
+- **Recommendation Systems:** Content-Based Filtering, Cosine Similarity
+- **Performance:** Web Workers, IndexedDB
 
 ## Como Executar os Projetos
 
