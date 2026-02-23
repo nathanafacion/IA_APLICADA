@@ -2,18 +2,9 @@
 
 Uma aplicação web moderna e performática para detecção de objetos em vídeos em tempo real, utilizando **COCO-SSD**, **TensorFlow.js** e **Web Workers**.
 
+## 📹 Demonstração
+
 ![Demo](./demo.gif)
-
-## 📹 Demonstração em Vídeo
-
-[🎬 Assista ao vídeo de demonstração aqui](COLOQUE_O_LINK_DO_VIDEO_AQUI)
-
-<!-- Ou se você tiver o vídeo localmente, use:
-<video width="100%" controls>
-  <source src="./demo.mp4" type="video/mp4">
-  Seu navegador não suporta vídeos HTML5.
-</video>
--->
 
 ## 🌟 Características
 
