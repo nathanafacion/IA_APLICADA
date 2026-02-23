@@ -1,0 +1,1 @@
+export { ObjectInventory } from './ObjectInventory';

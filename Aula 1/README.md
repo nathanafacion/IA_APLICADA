@@ -25,6 +25,10 @@ Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machin
 
 - **[RecomendaBoardgame](Modulo%203/RecomendaBoardgame/)** - Sistema de Recomendação de Jogos de Tabuleiro com TensorFlow.js e Next.js
 
+### Módulo 4 - Detecção de Objetos em Tempo Real
+
+- **[DetectaObjetos](Modulo%204/DetectaObjetos/)** - Sistema de Detecção de Objetos em Vídeo com COCO-SSD e TensorFlow.js
+
 ---
 
 Desenvolvido com ❤️ para o curso de IA Aplicada

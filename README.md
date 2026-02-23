@@ -40,14 +40,25 @@ Sistema de recomendação de jogos de tabuleiro (board games) utilizando TensorF
 - Funcionalidade: Recomendações inteligentes baseadas em similaridade de cosseno
 - Características: Treinamento no navegador, persistência com IndexedDB, interface com autocomplete
 
+### Aula 1 / Módulo 4 - Detecção de Objetos em Tempo Real
+
+#### 📁 DetectaObjetos
+
+Sistema de detecção de objetos em tempo real em vídeos utilizando COCO-SSD e TensorFlow.js.
+
+- Tecnologias: Next.js, React, TypeScript, TensorFlow.js, Tailwind CSS, Web Workers
+- Funcionalidade: Detecção de 80 classes de objetos (pessoas, animais, veículos, móveis, etc.)
+- Características: Processamento a 2 FPS, interface responsiva, estatísticas em tempo real, arquitetura modular
+
 ## Tecnologias Utilizadas
 
-- **Machine Learning:** TensorFlow, TensorFlow.js, Teachable Machine
+- **Machine Learning:** TensorFlow, TensorFlow.js, Teachable Machine, COCO-SSD
 - **Frontend:** Next.js, React, TypeScript
 - **Styling:** Tailwind CSS
-- **Computer Vision:** Image Recognition, Classification
+- **Computer Vision:** Image Recognition, Classification, Object Detection
 - **Recommendation Systems:** Content-Based Filtering, Cosine Similarity
-- **Performance:** Web Workers, IndexedDB
+- **Performance:** Web Workers, IndexedDB, requestAnimationFrame, ImageBitmap API
+- **Canvas API:** Real-time rendering and drawing
 
 ## Como Executar os Projetos
 

@@ -1,0 +1,1 @@
+export { DetectionCanvas } from './DetectionCanvas';
