@@ -1,0 +1,51 @@
+# Node
+node_modules/
+node_modules
+
+# Build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env*
+.env.*
+
+# Agent folders
+.agent/
+.agents/
+.claude/
+
+# Test
+coverage/
+
+# VSCode
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+*.log
+*.tmp
+
+# Ollama/Genkit
+ollama.db
+ollama.log
+
+# Others
+package-lock.json
+
+# Ignore local test scripts
+/testOllama.*
+.next
