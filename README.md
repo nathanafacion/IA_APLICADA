@@ -50,6 +50,19 @@ Sistema de detecção de objetos em tempo real em vídeos utilizando COCO-SSD e 
 - Funcionalidade: Detecção de 80 classes de objetos (pessoas, animais, veículos, móveis, etc.)
 - Características: Processamento a 2 FPS, interface responsiva, estatísticas em tempo real, arquitetura modular
 
+### Aula 1 / Módulo 5
+
+- Projeto a ser adicionado.
+
+### Aula 1 / Módulo 6 - Quiz de Matemática com IA
+
+#### 📁 Quiz
+
+O objetivo principal deste módulo foi aprender sobre Large Language Models (LLMs) e como criar bons prompts para agentes de IA. Como prática, desenvolvemos uma aplicação web de quiz de matemática com geração de questões por IA local (Ollama + Genkit), validação matemática robusta e gráficos interativos.
+
+- Tecnologias: Next.js, React, TypeScript, Tailwind CSS, Chart.js, Genkit, Ollama, mathjs
+- Funcionalidades: Geração automática de questões, 3 níveis de dificuldade, tópicos personalizáveis, validação rigorosa, gráficos de desempenho, explicações didáticas, arquitetura modular e integração com Genkit
+
 ## Tecnologias Utilizadas
 
 - **Machine Learning:** TensorFlow, TensorFlow.js, Teachable Machine, COCO-SSD

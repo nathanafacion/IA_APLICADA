@@ -1,6 +1,6 @@
 # 🧮 Quiz de Matemática com IA (Next.js + Genkit + Ollama)
 
-> **Aplicação web de quiz de matemática com geração de questões por IA local (Ollama + Genkit), validação matemática robusta, gráficos interativos e renderização de fórmulas matemáticas.**
+> **Aplicação web de quiz de matemática com geração de questões por IA local (Ollama + Genkit), validação matemática robusta e gráficos interativos.**
 
 ## 🎬 Demonstração
 
@@ -18,7 +18,6 @@ Este projeto demonstra como integrar IA generativa local (Ollama via Genkit) em 
 - **3 níveis de dificuldade**: Fácil, Médio, Difícil
 - **Tópicos personalizáveis**: aritmética, álgebra, frações, geometria, etc.
 - **Validação rigorosa**: só exibe questões e alternativas válidas e únicas
-- **Renderização de fórmulas matemáticas**: via [react-katex](https://katex.org/)
 - **Gráficos de desempenho**: barras e rosca com [Chart.js](https://www.chartjs.org/)
 - **Explicações didáticas**: IA justifica cada resposta
 - **Arquitetura modular**: serviços separados para IA, matemática, tipos e helpers
@@ -27,29 +26,28 @@ Este projeto demonstra como integrar IA generativa local (Ollama via Genkit) em 
 ## 🛠️ Tecnologias
 
 - **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS
-- **IA/LLM**: [Genkit](https://github.com/genkit-dev/genkit) + [Ollama](https://ollama.com/) (llama3.2)
+- **IA/LLM**: [Genkit](https://github.com/genkit-dev/genkit) + [Ollama](https://ollama.com/)
 - **Gráficos**: Chart.js 4 + react-chartjs-2
 - **Matemática**: mathjs
-- **Renderização matemática**: react-katex
 
 ## 📦 Pré-requisitos
 
 1. **Node.js** 18+
 2. **Ollama** instalado e rodando localmente
-3. **Modelo llama3.2** baixado no Ollama
+3. **Modelo de sua escolha** baixado no Ollama
 
 ### Instalação do Ollama
 
 ```bash
 # Windows: baixe em https://ollama.com/download
-ollama pull llama3.2
+ollama pull <nome-do-modelo>
 ```
 
 ### Verificação
 
 ```bash
 ollama list
-# Deve mostrar: llama3.2:latest
+# Deve mostrar: <nome-do-modelo>:latest
 ```
 
 ## ⚡ Instalação e Execução
@@ -80,7 +78,7 @@ Quiz/
 │   │   ├── QuizLoading/
 │   │   ├── QuizQuestion/
 │   │   ├── QuizResults/
-│   │   └── MathRender.tsx     # Renderização de fórmulas matemáticas
+│   │   └── MathRender.tsx     # (Opcional) Renderização de fórmulas matemáticas
 │   ├── contexts/QuizContext.tsx
 │   ├── hooks/useQuizActions.ts
 │   ├── services/
@@ -110,7 +108,7 @@ import { ollama } from "genkitx-ollama";
 
 export const ai = genkit({
   plugins: [ollama({ serverAddress: "http://127.0.0.1:11434" })],
-  model: "ollama/llama3.2",
+  model: "ollama/<nome-do-modelo>",
 });
 ```
 
@@ -119,7 +117,7 @@ export const ai = genkit({
 1. **Configure**: Escolha dificuldade e tópico
 2. **Inicie**: Clique em "Iniciar Quiz"
 3. **Aguarde**: IA gera questões validadas
-4. **Responda**: Selecione alternativas (fórmulas renderizadas)
+4. **Responda**: Selecione alternativas
 5. **Veja Resultados**: Gráficos, acertos/erros e explicações didáticas
 
 ## 📊 API Modularizada
@@ -147,7 +145,6 @@ export const ai = genkit({
 - **quizAiHelpers.ts**: Geração/explicação por IA (Genkit)
 - **quizMathHelpers.ts**: Validação matemática (mathjs)
 - **quizTypes.ts**: Tipos TypeScript
-- **MathRender.tsx**: Renderização de fórmulas matemáticas (react-katex)
 - **chartjs-setup.ts**: Registro de escalas Chart.js
 
 ## 🎨 Experiência do Usuário
@@ -161,7 +158,7 @@ export const ai = genkit({
 
 - Só são exibidas questões válidas (4 alternativas únicas, resposta correta presente)
 - Fallback amigável para questões inválidas
-- Gráficos e fórmulas matemáticas renderizados de forma robusta
+- Gráficos renderizados de forma robusta
 - Skills Genkit permitem fácil extensão para outros modelos/plugins
 
 ## 📄 Licença
@@ -188,7 +185,7 @@ Este projeto foi desenvolvido como parte do **Módulo 6 - IA Aplicada** para dem
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS
-- **IA/LLM**: Firebase Genkit + Ollama (llama3.2)
+- **IA/LLM**: Firebase Genkit + Ollama
 - **Gráficos**: Chart.js + react-chartjs-2
 - **Matemática**: mathjs
 
@@ -196,4 +193,4 @@ Este projeto foi desenvolvido como parte do **Módulo 6 - IA Aplicada** para dem
 
 1. **Node.js** 18+ instalado
 2. **Ollama** instalado e rodando
-3. **Modelo llama3.2** baixado no Ollama
+3. **Modelo de sua escolha** baixado no Ollama
