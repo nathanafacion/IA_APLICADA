@@ -1,4 +1,4 @@
-# Módulo 6: Quiz Interativo
+# Módulo 5, 6 e 7: Quiz Interativo
 
 O objetivo deste módulo foi aprender sobre Large Language Models (LLMs) e como criar prompts eficazes para agentes de IA. Além disso, desenvolvemos um projeto de Quiz interativo com Next.js e Tailwind CSS, aplicando conceitos de IA e UX para criar experiências de aprendizado dinâmicas.
 

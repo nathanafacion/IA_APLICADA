@@ -29,11 +29,7 @@ Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machin
 
 - **[DetectaObjetos](Modulo%204/DetectaObjetos/)** - Sistema de Detecção de Objetos em Vídeo com COCO-SSD e TensorFlow.js
 
-### Módulo 5 - (Em desenvolvimento)
-
-- Projeto a ser adicionado.
-
-### Módulo 6 - Quiz de Matemática com IA
+### Módulo 5, 6 e 7 - Quiz de Matemática com IA
 
 - **[Quiz](Modulo%206/Quiz/)** - Aplicação web de quiz de matemática com geração de questões por IA local (Ollama + Genkit), validação matemática robusta e gráficos interativos.
   - Geração automática de questões de matemática por IA local
