@@ -50,11 +50,7 @@ Sistema de detecção de objetos em tempo real em vídeos utilizando COCO-SSD e 
 - Funcionalidade: Detecção de 80 classes de objetos (pessoas, animais, veículos, móveis, etc.)
 - Características: Processamento a 2 FPS, interface responsiva, estatísticas em tempo real, arquitetura modular
 
-### Aula 1 / Módulo 5
-
-- Projeto a ser adicionado.
-
-### Aula 1 / Módulo 6 - Quiz de Matemática com IA
+### Aula 1 / Módulo 5,6 e 7 - Quiz de Matemática com IA
 
 #### 📁 Quiz
 
