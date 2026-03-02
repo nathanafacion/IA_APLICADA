@@ -59,6 +59,15 @@ O objetivo principal deste módulo foi aprender sobre Large Language Models (LLM
 - Tecnologias: Next.js, React, TypeScript, Tailwind CSS, Chart.js, Genkit, Ollama, mathjs
 - Funcionalidades: Geração automática de questões, 3 níveis de dificuldade, tópicos personalizáveis, validação rigorosa, gráficos de desempenho, explicações didáticas, arquitetura modular e integração com Genkit
 
+### Aula 1 / Módulo 8 - Gestor de Tarefas com FastMCP
+
+#### 📁 gestor_tarefas
+
+Sistema completo de gestão de tarefas construído com FastMCP (Model Context Protocol).
+
+- Tecnologias: Python, FastMCP
+- Funcionalidades: Demonstração dos pilares MCP (Tools, Resources, Prompts), API para adicionar, listar, atualizar e remover tarefas, persistência automática das tarefas, documentação detalhada e exemplos de uso
+
 ## Tecnologias Utilizadas
 
 - **Machine Learning:** TensorFlow, TensorFlow.js, Teachable Machine, COCO-SSD

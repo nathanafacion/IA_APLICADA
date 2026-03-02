@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "titulo": "Comprar bandeira para a copa do mundo",
+    "descricao": "Comprar bandeira para a copa do mundo",
+    "prioridade": "baixa",
+    "status": "pendente",
+    "criada_em": "2026-02-17T13:54:56.646898",
+    "concluida_em": null
+  },
+  {
+    "id": 2,
+    "titulo": "Comprar comida gato",
+    "descricao": "Comprar ração Biofresh para o gato - URGENTE",
+    "prioridade": "alta",
+    "status": "pendente",
+    "criada_em": "2026-02-17T14:12:19.848572",
+    "concluida_em": null
+  },
+  {
+    "id": 3,
+    "titulo": "criar mcp",
+    "descricao": "",
+    "prioridade": "alta",
+    "status": "pendente",
+    "criada_em": "2026-03-02T18:36:17.825489",
+    "concluida_em": null
+  }
+]

@@ -38,6 +38,14 @@ Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machin
   - Gráficos de desempenho e explicações didáticas
   - Arquitetura modular e integração com Genkit
 
+### Módulo 8 - Gestor de Tarefas com FastMCP
+
+- **[gestor_tarefas](Modulo%208/gestor_tarefas/)** - Sistema completo de gestão de tarefas construído com FastMCP (Model Context Protocol).
+  - Demonstração dos pilares MCP: Tools, Resources e Prompts
+  - API para adicionar, listar, atualizar e remover tarefas
+  - Persistência automática das tarefas
+  - Documentação detalhada e exemplos de uso
+
 ---
 
 Desenvolvido com ❤️ para o curso de IA Aplicada
