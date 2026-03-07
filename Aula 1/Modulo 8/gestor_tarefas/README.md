@@ -1,8 +1,8 @@
-![Diagrama MCP](imagem_mcp.png)
-
 # 📋 Gestor de Tarefas - FastMCP
 
 Sistema completo de gestão de tarefas construído com FastMCP (Model Context Protocol).
+
+![Diagrama MCP](imagem_mcp.png)
 
 ## 🎯 Sobre o Projeto
 
