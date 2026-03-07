@@ -1,0 +1,1 @@
+export { SearchHero } from "./SearchHero";

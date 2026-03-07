@@ -46,6 +46,14 @@ Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machin
   - Persistência automática das tarefas
   - Documentação detalhada e exemplos de uso
 
+### Módulo 9 e 10 - Busca RAG de Carros
+
+- **[car-search](Modulo%209%20e%2010/car-search/)** - Aplicação de busca de carros por linguagem natural usando RAG (Retrieval-Augmented Generation), Neo4j, embeddings e LLM via OpenRouter.
+  - Busca vetorial por similaridade de consulta
+  - Geração de resposta contextualizada por LLM
+  - Pipeline completo de RAG: Retrieval, Augmented, Generation
+  - Tecnologias: Next.js, React, TypeScript, Neo4j, OpenRouter
+
 ---
 
 Desenvolvido com ❤️ para o curso de IA Aplicada

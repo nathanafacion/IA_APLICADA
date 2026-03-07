@@ -68,15 +68,14 @@ Sistema completo de gestão de tarefas construído com FastMCP (Model Context Pr
 - Tecnologias: Python, FastMCP
 - Funcionalidades: Demonstração dos pilares MCP (Tools, Resources, Prompts), API para adicionar, listar, atualizar e remover tarefas, persistência automática das tarefas, documentação detalhada e exemplos de uso
 
-## Tecnologias Utilizadas
+### Aula 1 / Módulo 9 e 10 - Busca RAG de Carros
 
-- **Machine Learning:** TensorFlow, TensorFlow.js, Teachable Machine, COCO-SSD
-- **Frontend:** Next.js, React, TypeScript
-- **Styling:** Tailwind CSS
-- **Computer Vision:** Image Recognition, Classification, Object Detection
-- **Recommendation Systems:** Content-Based Filtering, Cosine Similarity
-- **Performance:** Web Workers, IndexedDB, requestAnimationFrame, ImageBitmap API
-- **Canvas API:** Real-time rendering and drawing
+#### 📁 car-search
+
+Aplicação de busca de carros por linguagem natural usando RAG (Retrieval-Augmented Generation), Neo4j, embeddings e LLM via OpenRouter.
+
+- Tecnologias: Next.js, React, TypeScript, Neo4j, OpenRouter
+- Funcionalidades: Busca vetorial por similaridade, geração de resposta contextualizada por LLM, pipeline completo de RAG
 
 ## Como Executar os Projetos
 
