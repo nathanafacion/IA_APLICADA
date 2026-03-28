@@ -1,0 +1,431 @@
+/* ==============================
+   Reset & Base
+   ============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ==============================
+   App Layout
+   ============================== */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #1a1d27;
+  border-bottom: 1px solid #2d3148;
+}
+
+.app-header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #7c87ff;
+}
+
+.app-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.btn-exportar-pdf {
+  margin-left: auto;
+  padding: 6px 14px;
+  background: #4F46E5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-exportar-pdf:hover {
+  background: #4338ca;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.calendar-section {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  border-right: 1px solid #2d3148;
+}
+
+.chat-section {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ==============================
+   Weekly Calendar Grid
+   ============================== */
+.weekly-calendar {
+  min-width: 700px;
+}
+
+.calendar-grid {
+  display: grid;
+  /* col 1 = time labels, cols 2-8 = days */
+  grid-template-columns: 56px repeat(7, 1fr);
+  /* row 1 = day headers, then 15-min slots for 07:00-21:00 = 56 rows */
+  grid-template-rows: 32px repeat(56, 16px);
+  gap: 0;
+  position: relative;
+}
+
+.corner {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.day-header {
+  background: #1e2235;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  padding: 6px 0;
+  border-bottom: 1px solid #2d3148;
+  border-right: 1px solid #2d3148;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.time-label {
+  grid-column: 1;
+  font-size: 0.65rem;
+  color: #475569;
+  text-align: right;
+  padding-right: 6px;
+  line-height: 1;
+  grid-row-end: span 1;
+}
+
+.grid-cell {
+  border-right: 1px solid #1e2235;
+  border-bottom: 1px dotted #1a1d27;
+}
+
+/* ==============================
+   Class Slots
+   ============================== */
+.class-slot {
+  position: relative;
+  border-radius: 4px;
+  padding: 4px 6px;
+  overflow: hidden;
+  cursor: default;
+  z-index: 5;
+  min-height: 16px;
+  margin: 1px;
+  opacity: 0.92;
+  transition: opacity 0.15s;
+}
+
+.class-slot:hover {
+  opacity: 1;
+  z-index: 20;
+}
+
+.slot-subject {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot-info {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot-time {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.slot-remove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.class-slot:hover .slot-remove {
+  opacity: 1;
+}
+
+/* ==============================
+   Chat Panel
+   ============================== */
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #13161f;
+}
+
+.chat-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #2d3148;
+}
+
+.chat-header h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-bubble {
+  max-width: 88%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.chat-bubble.assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.bubble-content {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-bubble.user .bubble-content {
+  background: #4f46e5;
+  color: #fff;
+  border-bottom-right-radius: 3px;
+}
+
+.chat-bubble.assistant .bubble-content {
+  background: #1e2235;
+  color: #e2e8f0;
+  border-bottom-left-radius: 3px;
+}
+
+.bubble-time {
+  font-size: 0.65rem;
+  color: #475569;
+}
+
+/* Typing indicator */
+.typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 10px 14px !important;
+}
+
+.typing span {
+  width: 6px;
+  height: 6px;
+  background: #64748b;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+}
+
+.chat-input-form {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid #2d3148;
+}
+
+.chat-input-form input {
+  flex: 1;
+  background: #1e2235;
+  border: 1px solid #2d3148;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.chat-input-form input:focus {
+  border-color: #4f46e5;
+}
+
+.chat-input-form button {
+  background: #4f46e5;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.chat-input-form button:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.chat-input-form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ==============================
+   Conflict Modal
+   ============================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #1e2235;
+  border: 1px solid #2d3148;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 420px;
+  width: 90%;
+}
+
+.modal h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 12px;
+}
+
+.modal p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.modal ul {
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.modal li {
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  margin-bottom: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-cancel {
+  background: #374151;
+  border: none;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn-cancel:hover {
+  background: #4b5563;
+}
+
+.btn-confirm {
+  background: #f59e0b;
+  border: none;
+  color: #000;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-confirm:hover {
+  background: #d97706;
+}

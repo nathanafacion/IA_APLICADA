@@ -1,0 +1,31 @@
+{
+  "name": "weekly-scheduler",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "inspect:langchain": "npm list --depth=2 | grep langchain"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.58",
+    "@langchain/langgraph": "^0.2.42",
+    "@langchain/ollama": "^0.2.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "next": "^15.3.9",
+    "react": "^18",
+    "react-dom": "^18",
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^10",
+    "typescript": "^5"
+  }
+}

@@ -77,6 +77,34 @@ Aplicação de busca de carros por linguagem natural usando RAG (Retrieval-Augme
 - Tecnologias: Next.js, React, TypeScript, Neo4j, OpenRouter
 - Funcionalidades: Busca vetorial por similaridade, geração de resposta contextualizada por LLM, pipeline completo de RAG
 
+### Aula 2 — LangChain, LangGraph e Agentes de IA
+
+#### 📁 Exemplos da Aula
+
+Série de exemplos práticos demonstrados em aula, cobrindo os principais conceitos de LangChain e LangGraph:
+
+| Exemplo                           | Descrição                                                                      |
+| --------------------------------- | ------------------------------------------------------------------------------ |
+| **01-smart-model-router-gateway** | Gateway Fastify que roteia requisições para diferentes modelos via OpenRouter  |
+| **02-langchain-intro**            | Introdução ao LangChain com servidor HTTP e chain básica                       |
+| **03-medical-appointment**        | Prompt chaining com outputs estruturados via Zod (Plan → Draft → Review)       |
+| **04-song-highlights**            | Recomendador de músicas com memória persistente via `MemorySaver` do LangGraph |
+| **05-safeguard-prompt-injection** | Demonstração de ataques de prompt injection e defesas com guardrails           |
+| **06-rag-neo4j-students**         | Pipeline RAG completo com Neo4j como banco vetorial                            |
+| **07-doc-analysis**               | Análise de documentos com LLM                                                  |
+
+> Cada exemplo possui versão `-template` (código base) e `-z` (solução completa).
+
+- Tecnologias: Node.js, TypeScript, LangChain, LangGraph, Fastify, Neo4j, Zod, OpenRouter
+
+#### 📁 WeeklyScheduler
+
+Aplicação de agenda semanal com assistente conversacional em português, guardrails de segurança e exportação de PDF. Demonstra o uso de LangGraph para orquestração de agentes com roteamento condicional.
+
+- Tecnologias: Next.js, React, TypeScript, LangGraph, Ollama (llama3.2), jsPDF, CSS Grid
+- Funcionalidades: Chat em linguagem natural para adicionar/remover eventos, grade semanal visual (07h–20h), detecção de conflitos de horário, nó de guardrails que filtra mensagens fora do escopo, exportação do calendário para PDF
+- Arquitetura: Grafo de estados `START → guardrails_check → (chat | blocked) → END`
+
 ## Como Executar os Projetos
 
 Navegue até a pasta do projeto desejado e siga as instruções específicas no README de cada projeto.
