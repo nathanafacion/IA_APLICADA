@@ -97,6 +97,14 @@ Série de exemplos práticos demonstrados em aula, cobrindo os principais concei
 
 - Tecnologias: Node.js, TypeScript, LangChain, LangGraph, Fastify, Neo4j, Zod, OpenRouter
 
+#### 📁 LeitorRSS
+
+Leitor de feeds RSS com assistente de IA integrado. O assistente conversa com o usuário, gerencia feeds, resume notícias e faz recomendações personalizadas baseadas nos interesses do usuário.
+
+- Tecnologias: Next.js, React, TypeScript, LangGraph, LangChain, Ollama (llama3.2), better-sqlite3, Zod
+- Funcionalidades: Gerenciamento de feeds via chat ou interface, sincronização automática de artigos (RSS 2.0 e Atom), resumo de notícias por IA, recomendações personalizadas, summary automático de interesses, guardrails contra prompt injection, proteção anti-SSRF
+- Arquitetura: Grafo de estados `START → guardrails_check → (chat | blocked) → END`
+
 #### 📁 WeeklyScheduler
 
 Aplicação de agenda semanal com assistente conversacional em português, guardrails de segurança e exportação de PDF. Demonstra o uso de LangGraph para orquestração de agentes com roteamento condicional.

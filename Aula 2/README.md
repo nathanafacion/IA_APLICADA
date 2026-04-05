@@ -21,7 +21,8 @@ Aula 2/
 │   ├── 06-rag-neo4j-students-z/
 │   └── 07-doc-analysis/
 └── Modulo 1,2,3,4,5/
-    └── WeeklyScheduler/       # Projeto prático dos módulos
+    ├── LeitorRSS/             # Leitor RSS inteligente com IA
+    └── WeeklyScheduler/       # Agenda semanal com assistente IA
 ```
 
 ---
@@ -83,7 +84,27 @@ Análise de documentos com LLM. Referências e links de estudo sobre Large Langu
 
 ---
 
-## 🗓️ Módulos 1–5 — Projeto Prático
+## 🗓️ Módulos 1–5 — Projetos Práticos
+
+### LeitorRSS — Leitor RSS Inteligente com IA
+
+Leitor de feeds RSS com assistente de IA integrado. O assistente conversa com o usuário, gerencia feeds, resume notícias e faz recomendações personalizadas baseadas nos interesses do usuário.
+
+- **Stack:** Next.js 15, TypeScript, LangGraph, LangChain, Ollama (`llama3.2`), better-sqlite3, Zod
+- **Funcionalidades:**
+  - Gerenciamento de feeds RSS via chat ou interface (adicionar, remover, listar)
+  - Sincronização automática de artigos (RSS 2.0 e Atom)
+  - Resumo de notícias gerado por IA
+  - Recomendações personalizadas (5 artigos) baseadas no histórico e interesses
+  - Summary automático de interesses a cada 10 mensagens
+  - Sugestão de novos feeds (só adiciona com confirmação)
+  - Guardrails contra prompt injection e proteção anti-SSRF
+  - Conversa casual para conhecer melhor o usuário
+- **Arquitetura LangGraph:**
+  ```
+  START → guardrails_check → chat (safe) → END
+                           → blocked (unsafe) → END
+  ```
 
 ### WeeklyScheduler — Agenda Semanal com IA
 
