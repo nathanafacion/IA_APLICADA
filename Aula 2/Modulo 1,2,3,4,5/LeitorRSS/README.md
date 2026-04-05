@@ -1,5 +1,7 @@
 # 📰 Leitor RSS Inteligente com IA
 
+![Leitor RSS](feedrss.png)
+
 Leitor de feeds RSS com assistente de IA integrado, construído com Next.js, LangGraph e Ollama. O assistente conversa com o usuário, gerencia feeds, resume notícias e faz recomendações personalizadas baseadas nos interesses do usuário.
 
 ## ✨ Funcionalidades
@@ -168,3 +170,8 @@ OLLAMA_MODEL=llama3.2
 - **Anti-SSRF** — Validação de URLs para prevenir Server-Side Request Forgery
 - **Anti-Injection** — Detecção de tentativas de prompt injection e jailbreak
 - **Conversa segura** — Conversa casual é permitida; apenas conteúdo genuinamente malicioso é bloqueado
+
+## 🔮 Pontos de Melhoria
+
+- **Refatoração de código** — Reorganizar e simplificar módulos para melhor manutenibilidade e reutilização
+- **Trocar LLM** — Substituir o Ollama por uma LLM de produção (ex: OpenAI, Anthropic, OpenRouter), já que o Ollama é utilizado apenas para testes locais
