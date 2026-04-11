@@ -1,0 +1,83 @@
+# Content Trends Analyzer
+
+> Aplicação Next.js 16 que analisa títulos e descrições de conteúdo usando Google Trends via SearchApi, retornando score de potencial viral (0-100), feedback, palavras-chave sugeridas, gráficos de interesse e sugestões de títulos otimizados gerados por IA local (Ollama).
+
+Stack principal: Next.js 16.2.3 (App Router, Turbopack), React 19, TypeScript 5, Tailwind CSS 4, Shadcn/UI (Base UI), Zustand 5, Recharts 3, Axios, Ollama (llama3.2).
+
+A API externa usada é a [SearchApi](https://www.searchapi.io/) para consultas ao Google Trends. A chave da API fica em `.env.local` como `SEARCH_API_KEY`. O [Ollama](https://ollama.com/) roda localmente para gerar sugestões de títulos via LLM. Variáveis opcionais: `OLLAMA_HOST` (default: `http://localhost:11434`) e `OLLAMA_MODEL` (default: `llama3.2`).
+
+Arquitetura: Screaming Architecture por features (`features/analyzer`, `features/trends`, `features/shared`) com separação de `components/`, `services/`, `store/`, `hooks/`, `utils/`, e `lib/`. Testes em `tests/` com Vitest 2 + Testing Library + happy-dom (85 testes).
+
+## Páginas
+
+- [Home — Analisador de Conteúdo](src/app/page.tsx): Página principal com hero section e formulário de análise. O usuário informa título e descrição, recebe score, feedback, keywords, sugestões de títulos via IA e gráfico de tendências.
+- [Dashboard de Tendências](src/app/trends/page.tsx): Dashboard com tabs — "Em Alta Agora" mostra termos trending no Brasil, "Buscar Termo" permite pesquisar interesse ao longo do tempo.
+
+## API Routes
+
+- [POST /api/analyze](src/app/api/analyze/route.ts): Recebe `{ title, description }`, extrai keywords, consulta Google Trends TIMESERIES + RELATED_QUERIES via SearchApi, calcula score 0-100, gera sugestões de títulos via Ollama LLM com scores reais, retorna `{ score, feedback, suggestedKeywords, trendData, suggestions }`.
+- [GET /api/trends](src/app/api/trends/route.ts): Retorna top 20 termos em alta no Brasil com tráfego e queries relacionadas. Usa `google_trends_trending` do SearchApi.
+- [GET /api/trends/search?q=termo](src/app/api/trends/search/route.ts): Retorna dados de interesse ao longo do tempo para um termo específico. Usa Google Trends TIMESERIES.
+
+## Serviços
+
+- [analyzeContent](src/features/analyzer/services/analyzeContent.ts): Serviço principal — extrai keywords, consulta SearchApi (TIMESERIES + RELATED_QUERIES em paralelo), calcula score com trend/peak bonus, gera feedback em pt-BR, usa Ollama LLM para gerar 5 sugestões de títulos otimizados com scores reais. Fallback com templates se o Ollama falhar. Exports: `extractKeywords()`, `calculateScore()`, `generateFeedback()`, `extractTopic()`, `capitalize()`, `analyzeContent()`.
+- [trendsService](src/features/trends/services/trendsService.ts): `fetchTrendingNow()` e `fetchInterestOverTime(query)` via SearchApi. Fallback com dados simulados.
+
+## Integrações Externas
+
+- [searchApiClient](src/lib/searchapi.ts): Cliente Axios configurado com baseURL SearchApi e api_key do environment.
+- [ollamaClient](src/lib/ollama.ts): Cliente Ollama local para geração de sugestões de títulos via LLM. Host e modelo configuráveis via env.
+
+## Componentes
+
+- [AnalyzerForm](src/features/analyzer/components/AnalyzerForm.tsx): Formulário client-side com inputs de título/descrição, submit para `/api/analyze`, exibe ScoreDisplay, SuggestionsDisplay e TrendChart.
+- [ScoreDisplay](src/features/analyzer/components/ScoreDisplay.tsx): Card com score colorido (gradient por faixa), barra de progresso, feedback e badges de keywords sugeridas.
+- [SuggestionsDisplay](src/features/analyzer/components/SuggestionsDisplay.tsx): 5 sugestões de títulos gerados por IA com descrição, score estimado, barra de progresso e badge de diferença de pontos.
+- [TrendChart](src/features/shared/TrendChart.tsx): Gráfico de área (Recharts AreaChart) com gradiente violeta, usado na análise e na busca de termos.
+- [TrendingList](src/features/trends/components/TrendingList.tsx): Grid de cards mostrando termos em alta com tráfego e queries relacionadas.
+- [TrendSearch](src/features/trends/components/TrendSearch.tsx): Formulário de busca de termo específico com exibição de TrendChart.
+- [Navbar](src/components/common/Navbar.tsx): Header sticky com gradiente violeta-rosa, logo animado, nav pills com backdrop-blur.
+- [Footer](src/components/common/Footer.tsx): Footer com gradiente sutil e atribuição.
+
+## Estado & Utilitários
+
+- [useAppStore](src/store/useAppStore.ts): Store Zustand — `analysisResult` (score, feedback, keywords, trendData, suggestions), `isAnalyzing`, `trendingTerms`, `searchTrendData`, `isLoadingTrends` e setters. Tipos: `Suggestion`, `AnalysisResult`, `TrendingTerm`.
+- [useDebounce](src/hooks/useDebounce.ts): Hook genérico de debounce com delay configurável (default 500ms).
+- [formatting](src/utils/formatting.ts): `formatScore()`, `scoreColor()`, `scoreBg()`, `formatDate()` para formatação de scores com cores e labels em pt-BR.
+- [cn](src/lib/utils.ts): Utility `cn()` para merge de classes Tailwind com clsx + tailwind-merge.
+
+## Componentes UI (Shadcn/Base UI)
+
+- [Button](src/components/ui/button.tsx): Botão com variantes (default, destructive, outline, secondary, ghost, link) e tamanhos.
+- [Card](src/components/ui/card.tsx): Card container com Header, Footer, Title, Description, Content.
+- [Input](src/components/ui/input.tsx): Input de texto estilizado.
+- [Textarea](src/components/ui/textarea.tsx): Textarea estilizado.
+- [Badge](src/components/ui/badge.tsx): Badge/tag com variantes.
+- [Tabs](src/components/ui/tabs.tsx): Componentes de navegação por tabs.
+- [Progress](src/components/ui/progress.tsx): Barra de progresso.
+- [Separator](src/components/ui/separator.tsx): Divisor horizontal/vertical.
+
+## Testes
+
+- [tests/utils/formatting.test.ts](tests/utils/formatting.test.ts): 18 testes de formatScore, scoreColor, scoreBg, formatDate.
+- [tests/store/useAppStore.test.ts](tests/store/useAppStore.test.ts): 11 testes de estado inicial e actions do Zustand.
+- [tests/services/analyzeContent.test.ts](tests/services/analyzeContent.test.ts): 33 testes unitários de extractKeywords, calculateScore, generateFeedback, extractTopic, capitalize.
+- [tests/services/analyzeContent.integration.test.ts](tests/services/analyzeContent.integration.test.ts): 5 testes de integração com SearchApi e Ollama mockados.
+- [tests/api/analyze.test.ts](tests/api/analyze.test.ts): 4 testes da route POST /api/analyze.
+- [tests/components/ScoreDisplay.test.tsx](tests/components/ScoreDisplay.test.tsx): 7 testes de renderização do ScoreDisplay.
+- [tests/components/SuggestionsDisplay.test.tsx](tests/components/SuggestionsDisplay.test.tsx): 7 testes de renderização do SuggestionsDisplay.
+
+## Configuração
+
+- [vitest.config.ts](vitest.config.ts): Vitest com React plugin, happy-dom, path alias `@/src`, globals.
+- [globals.css](src/app/globals.css): Tema customizado com paleta violeta/rosa, utility classes, keyframe animations.
+- [layout.tsx](src/app/layout.tsx): Root layout com fontes Space Grotesk + JetBrains Mono, metadata, lang pt-BR.
+- [components.json](components.json): Config do Shadcn/UI — style "default", Base UI primitives.
+
+## Optional
+
+- [readme.agent.md](.github/agents/readme.agent.md): Agente que regenera o README.md quando o código muda.
+- [llms-txt.agent.md](.github/agents/llms-txt.agent.md): Agente que regenera o llms.txt seguindo a spec llms.txt.
+- [debug.agent.md](.github/agents/debug.agent.md): Agente de debug com 4 fases (Assessment, Investigation, Resolution, QA).
+- [unit-test-generator](/.agents/skills/unit-test-generator/SKILL.md): Skill de geração de testes com AAA pattern.

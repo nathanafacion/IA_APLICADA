@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-code-review": {
+      "source": "langgenius/dify",
+      "sourceType": "github",
+      "computedHash": "affbe67082bd8329d044657752f998bdd4d388dd05ca6250f4f9af7d2b642586"
+    },
+    "frontend-design": {
+      "source": "stevengonsalvez/agents-in-a-box",
+      "sourceType": "github",
+      "computedHash": "9d2791229aed16e08242b8daf8fe53dfb563dd622a548fa0c13a0b91a62e401f"
+    },
+    "next-best-practices": {
+      "source": "vercel-labs/next-skills",
+      "sourceType": "github",
+      "computedHash": "db85045827ebeb83ac8dbc992b69188755eeb74dcf01cbf5e694d58aa494a106"
+    },
+    "shadcn-ui": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "computedHash": "119a14a004bd30fa99d386df599bd0db8d057cca146f7ee08349daed48b2ea55"
+    },
+    "unit-test-generator": {
+      "source": "patricio0312rev/skills",
+      "sourceType": "github",
+      "computedHash": "6bb3f6804b00dcb9e574ab8e8830bdd31bf584625e3a50ac794f9c3da48f4234"
+    }
+  }
+}
