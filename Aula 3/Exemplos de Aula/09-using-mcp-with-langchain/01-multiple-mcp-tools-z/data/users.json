@@ -1,0 +1,17 @@
+[
+    {
+        "name": "João Silva",
+        "phone": "(11) 91234-5678",
+        "_id": "69b0fe8a35faeca27293412e"
+    },
+    {
+        "name": "Maria Santos",
+        "phone": "(21) 92345-6789",
+        "_id": "69b0fe8f35faeca27293412f"
+    },
+    {
+        "name": "Carlos Oliveira",
+        "phone": "(31) 93456-7890",
+        "_id": "69b0fe9035faeca272934130"
+    }
+]

@@ -1,0 +1,29 @@
+{
+  "name": "testes-com-bancos-de-dados",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DB_NAME=customers node src/index.js",
+    "dev": "DB_NAME=customers node --watch src/index.js",
+    "test": "NODE_ENV=test node --experimental-test-coverage --test test/api.test.js",
+    "test:dev": "NODE_ENV=test node --watch --test test/api.test.js",
+    "test:debug": "NODE_ENV=test node --inspect --test --watch test/api.test.js",
+    "infra:up": "docker-compose up -d --build --wait",
+    "infra:up:db": "docker-compose up mongodb -d --wait",
+    "infra:down": "docker-compose down --volumes"
+  },
+  "keywords": [],
+  "author": "erickwendel",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/jwt": "^10.0.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "fastify": "^5.7.4",
+    "mongodb": "^7.1.0"
+  }
+}

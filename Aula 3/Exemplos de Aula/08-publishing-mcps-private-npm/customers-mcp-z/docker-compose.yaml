@@ -1,0 +1,6 @@
+services:
+  verdaccio:
+    image: verdaccio/verdaccio:6
+    container_name: "verdaccio"
+    ports:
+      - "4873:4873"

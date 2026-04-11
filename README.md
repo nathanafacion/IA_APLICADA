@@ -113,6 +113,36 @@ Aplicação de agenda semanal com assistente conversacional em português, guard
 - Funcionalidades: Chat em linguagem natural para adicionar/remover eventos, grade semanal visual (07h–20h), detecção de conflitos de horário, nó de guardrails que filtra mensagens fora do escopo, exportação do calendário para PDF
 - Arquitetura: Grafo de estados `START → guardrails_check → (chat | blocked) → END`
 
+### Aula 3 — MCPs, Skills, Agents e Personalização do Copilot
+
+#### 📁 Exemplos de Aula
+
+Série de exemplos práticos cobrindo o ecossistema MCP (Model Context Protocol), Skills e Agents personalizados:
+
+| Exemplo                                | Descrição                                                                                 |
+| -------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **01-multiple-mcp-tools**              | Agente LangGraph que orquestra múltiplos MCPs (CSV, filesystem, MongoDB)                  |
+| **02-google-trends-agent**             | Agente que usa SerpAPI Google Trends como tool para estratégia de conteúdo                |
+| **03-dev-instructions-agents**         | Agentes personalizados para o Copilot via `.github/agents/` (dev, Playwright)             |
+| **04-skills**                          | Skills reutilizáveis para o Copilot (ffmpeg, Neo4j Cypher, find-skills)                   |
+| **05-mcps-do-zero**                    | MCP server do zero com SDK oficial — criptografia AES-256-CBC (Tools, Resources, Prompts) |
+| **06-your-legacy-api-as-mcp**          | Transformação de API REST legada (Fastify + MongoDB) em MCP server                        |
+| **07-api-security-auth-rate-limiting** | Segurança em MCPs com JWT authentication e rate limiting                                  |
+| **08-publishing-mcps-private-npm**     | Publicação de MCPs como pacotes npm (Verdaccio privado e npmjs.org)                       |
+| **09-using-mcp-with-langchain**        | Consumo de MCP servers como tools em pipelines LangChain/LangGraph                        |
+
+> Cada exemplo possui versão `-template` (código base) e `-z` (solução completa).
+
+- Tecnologias: Node.js, TypeScript, LangGraph, LangChain, MCP SDK, MCP Adapters, Fastify, MongoDB, Verdaccio
+
+#### 📁 Content Trends Analyzer
+
+Aplicação Next.js que analisa títulos e descrições de conteúdo usando dados do Google Trends, retornando um score de potencial viral (0-100), feedback, palavras-chave sugeridas e sugestões de títulos otimizados gerados por IA local (Ollama).
+
+- Tecnologias: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Shadcn/UI, Zustand, Recharts, Ollama (llama3.2), SearchApi, Vitest
+- Funcionalidades: Análise de potencial viral de títulos, score 0-100 com feedback, sugestões de títulos otimizados por LLM, dashboard de tendências, gráficos interativos, 85 testes unitários e de integração
+- Arquitetura: Screaming Architecture organizada por features
+
 ## Como Executar os Projetos
 
 Navegue até a pasta do projeto desejado e siga as instruções específicas no README de cada projeto.
