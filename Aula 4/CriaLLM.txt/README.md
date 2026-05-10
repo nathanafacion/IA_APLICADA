@@ -13,15 +13,15 @@ CriaLLM é um **runtime de agentes autônomos** baseado em contratos YAML declar
 
 Cada agente é uma pasta com até 7 arquivos de contrato:
 
-| Arquivo | Responsabilidade |
-|---|---|
-| `agent.md` | Identidade, tipo e contrato de saída |
-| `skills.md` | Ferramentas disponíveis e suas interfaces |
-| `rules.md` | Restrições, ferramentas obrigatórias e circuit breaker |
-| `memory.md` | Estratégia de memória do agente |
-| `hooks.md` | Ganchos de ciclo de vida (antes/após cada etapa) |
-| `commands.md` | Comandos aceitos via entrada |
-| `contracts/` | Contratos de planejador, executor, loop e toolbox |
+| Arquivo       | Responsabilidade                                       |
+| ------------- | ------------------------------------------------------ |
+| `agent.md`    | Identidade, tipo e contrato de saída                   |
+| `skills.md`   | Ferramentas disponíveis e suas interfaces              |
+| `rules.md`    | Restrições, ferramentas obrigatórias e circuit breaker |
+| `memory.md`   | Estratégia de memória do agente                        |
+| `hooks.md`    | Ganchos de ciclo de vida (antes/após cada etapa)       |
+| `commands.md` | Comandos aceitos via entrada                           |
+| `contracts/`  | Contratos de planejador, executor, loop e toolbox      |
 
 O runtime lê esses contratos, monta o ciclo **perceber → planejar → agir → avaliar** e executa automaticamente.
 
@@ -123,7 +123,7 @@ Agente autônomo que documenta automaticamente todas as páginas de um projeto w
 
 1. **`detectar_paginas`** — varre o projeto, identifica o tipo (Jekyll/Next.js/React), extrai rotas, títulos e descrições do frontmatter de cada página
 2. **`gerar_md`** — gera um arquivo `.md` por página com título e descrição reais
-3. **`gerar_llms_txt`** — gera o arquivo `llms.txt` no padrão [llmstxt.org](https://llmstxt.org) com todas as rotas
+3. **`gerar_llms_txt`** — gera o arquivo `llms.txt` no padrão [llmstxt.org](https://llmstxt.org) com todas as rotas, seguindo o formato oficial: H1 com nome do site, blockquote com descrição e lista `- [Título](url): descrição` por página
 
 **Exemplo de execução contra um site Jekyll:**
 
@@ -132,6 +132,7 @@ python main.py rodar --agente ../rota-monitor-agent --entrada "C:\caminho\para\s
 ```
 
 Saída gerada em `seu-site/public/`:
+
 ```
 public/
 ├── pagina_index.md
@@ -161,11 +162,11 @@ python main.py rodar --agente ../seu-agente --entrada "sua-entrada"
 
 ## Modo mock vs modo real
 
-| | Sem `OPENAI_API_KEY` | Com `OPENAI_API_KEY` |
-|---|---|---|
-| **Planejador** | Mock determinístico (percorre ferramentas em ordem) | GPT-4o-mini |
-| **Ferramentas sem `tools.py`** | LLM gera o retorno simulado | GPT-4o-mini |
-| **Ferramentas com `tools.py`** | Código real executado | Código real executado |
+|                                | Sem `OPENAI_API_KEY`                                | Com `OPENAI_API_KEY`  |
+| ------------------------------ | --------------------------------------------------- | --------------------- |
+| **Planejador**                 | Mock determinístico (percorre ferramentas em ordem) | GPT-4o-mini           |
+| **Ferramentas sem `tools.py`** | LLM gera o retorno simulado                         | GPT-4o-mini           |
+| **Ferramentas com `tools.py`** | Código real executado                               | Código real executado |
 
 ---
 

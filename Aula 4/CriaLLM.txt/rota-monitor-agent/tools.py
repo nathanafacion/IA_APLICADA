@@ -136,6 +136,8 @@ def _scan_jekyll(raiz: Path) -> list:
         partes = arq.relative_to(raiz).parts
         if any(p.startswith("_") and p != "_posts" for p in partes):
             continue
+        if partes[0] in ("public", "node_modules", ".git", "_site"):
+            continue
         if arq.name.startswith("_"):
             continue
         if arq.parent == raiz:
@@ -266,30 +268,71 @@ def gerar_md(argumentos: dict) -> dict:
     }
 
 
+def _ler_config_jekyll(raiz: Path) -> dict:
+    """Lê title, url e description do _config.yml de um projeto Jekyll."""
+    config_yml = raiz / "_config.yml"
+    resultado = {}
+    if config_yml.exists():
+        try:
+            import yaml as _yaml
+            dados = _yaml.safe_load(config_yml.read_text(encoding="utf-8"))
+            if isinstance(dados, dict):
+                resultado["title"] = dados.get("title", "")
+                resultado["url"] = dados.get("url", "").rstrip("/")
+                resultado["description"] = dados.get("description", "")
+        except Exception:
+            pass
+    return resultado
+
+
 def gerar_llms_txt(argumentos: dict) -> dict:
     paginas = argumentos.get("paginas", [])
     tipo_projeto = argumentos.get("tipo_projeto", "desconhecido")
     caminho_saida_str = argumentos.get("caminho_saida", "./docs")
+    caminho_projeto_str = argumentos.get("caminho_projeto", "")
 
     caminho_saida = Path(caminho_saida_str).expanduser().resolve()
     caminho_saida.mkdir(parents=True, exist_ok=True)
 
+    # tenta ler metadados do _config.yml para Jekyll
+    config = {}
+    if caminho_projeto_str:
+        config = _ler_config_jekyll(Path(caminho_projeto_str).expanduser().resolve())
+    elif tipo_projeto == "jekyll":
+        # tenta inferir a raiz a partir do caminho de saída (caminho_saida é <raiz>/public)
+        config = _ler_config_jekyll(caminho_saida.parent)
+
+    nome_site = config.get("title") or "Site"
+    url_base = config.get("url", "")
+    descricao_site = config.get("description", "")
+
     caminho_arquivo = caminho_saida / "llms.txt"
 
-    linhas = [
-        "# llms.txt",
-        f"# Gerado em: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-        f"# Tipo de projeto: {tipo_projeto}",
-        f"# Total de paginas: {len(paginas)}",
+    linhas = [f"# {nome_site}", ""]
+
+    if descricao_site:
+        linhas += [f"> {descricao_site}", ""]
+
+    linhas += [
+        f"## Páginas ({tipo_projeto})",
         "",
     ]
 
     for pagina in paginas:
         if isinstance(pagina, dict):
-            rota = pagina.get("rota") or pagina.get("pagina") or str(pagina)
+            rota = pagina.get("rota", "/")
+            titulo = pagina.get("titulo") or rota
+            descricao = pagina.get("descricao", "")
         else:
             rota = str(pagina)
-        linhas.append(f"- {rota}")
+            titulo = rota
+            descricao = ""
+
+        url = f"{url_base}{rota}" if url_base else rota
+        linha = f"- [{titulo}]({url})"
+        if descricao:
+            linha += f": {descricao}"
+        linhas.append(linha)
 
     caminho_arquivo.write_text("\n".join(linhas), encoding="utf-8")
     print(f"  [tools] gerado: {caminho_arquivo}")
