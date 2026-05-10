@@ -1,0 +1,15 @@
+conteudo:
+  entrada:
+    janela_tempo_horas: 24
+    nome_servico: checkout
+  ferramenta: historico_deploys
+  observacoes:
+    contagem_total: 1
+    deploys:
+    - autor: ci/cd-pipeline
+      data_hora: '2026-04-24T18:49:50.044640'
+      mudancas: refactor connection pool settings
+      status: sucesso
+      versao: v2.4.1
+id: lon_e20e7e02
+timestamp: '2026-04-24T19:34:50.061396'

@@ -1,0 +1,7 @@
+id: fact_003
+timestamp: "2025-03-15T14:35:00"
+conteudo:
+  fato: time de pagamentos prefere rollback manual
+  fonte: relatorio_incidente
+  confianca: media
+  dominio: servico de pagamentos

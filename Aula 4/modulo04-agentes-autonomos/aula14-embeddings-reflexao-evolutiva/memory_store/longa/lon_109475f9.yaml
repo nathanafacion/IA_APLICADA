@@ -1,0 +1,37 @@
+conteudo:
+  entrada:
+    evidencia:
+      deploys:
+      - data_hora: '2026-04-24T18:34:51.856402'
+        mudancas: refactor connection pool settings
+        versao: v2.4.1
+      issues:
+      - numero: 142
+        titulo: Latencia elevada apos deploy v2.4.1
+      - numero: 138
+        titulo: Circuit breaker ativando para upstream-payments
+      logs:
+      - mensagem: 'timeout conectando a upstream-payments: 30s exceeded'
+        nivel: ERROR
+        timestamp: '2026-04-24T19:07:46.848811'
+      - mensagem: circuit breaker aberto para upstream-payments
+        nivel: ERROR
+        timestamp: '2026-04-24T19:11:46.848811'
+      - mensagem: 'latencia p99 acima do SLO: 342ms > 200ms'
+        nivel: WARN
+        timestamp: '2026-04-24T19:14:46.848811'
+      metricas:
+        latencia_p99_ms: 342.7
+        status: degradado
+        taxa_erro: 4.2
+        vazao_rps: 1847
+    nome_servico: pagamentos
+    recomendacao:
+      acao: Reverter o deploy v2.4.1 e investigar a configuração do pool de conexões.
+    severidade: alta
+  ferramenta: relatorio_incidente
+  observacoes:
+    id_incidente: INC-2026-04-24-001
+    status: aberto
+id: lon_109475f9
+timestamp: '2026-04-24T19:20:09.177297'

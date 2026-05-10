@@ -1,0 +1,14 @@
+conteudo:
+  entrada:
+    janela_tempo_minutos: 5
+    nome_servico: analytics
+  ferramenta: consultar_metricas
+  observacoes:
+    coletado_em: '2026-04-24T19:36:43.526560'
+    latencia_p99_ms: 342.7
+    servico: analytics
+    status: degradado
+    taxa_erro: 4.2
+    vazao_rps: 1847
+id: lon_1d7af81c
+timestamp: '2026-04-24T19:36:53.424129'

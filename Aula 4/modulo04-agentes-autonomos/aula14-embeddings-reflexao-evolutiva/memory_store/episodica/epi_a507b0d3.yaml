@@ -1,0 +1,13 @@
+conteudo:
+  erros_encontrados: []
+  etapas_executadas: 5
+  ferramentas_chamadas:
+  - consultar_metricas
+  - buscar_logs
+  - historico_deploys
+  - relatorio_incidente
+  objetivo: resolver_incidente
+  resultado_final: Todas as evidências foram coletadas e um relatório de incidente
+    foi gerado.
+id: epi_a507b0d3
+timestamp: '2026-04-22T15:02:19.019753'

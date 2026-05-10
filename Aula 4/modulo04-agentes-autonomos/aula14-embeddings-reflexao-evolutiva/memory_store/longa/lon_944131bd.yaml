@@ -1,0 +1,23 @@
+conteudo:
+  entrada:
+    janela_tempo_minutos: 60
+    nivel_minimo: error
+    nome_servico: analytics
+  ferramenta: buscar_logs
+  observacoes:
+    contagem_total: 3
+    eventos:
+    - mensagem: 'timeout conectando a upstream-payments: 30s exceeded'
+      nivel: ERROR
+      servico: analytics
+      timestamp: '2026-04-24T19:24:48.644241'
+    - mensagem: circuit breaker aberto para upstream-payments
+      nivel: ERROR
+      servico: analytics
+      timestamp: '2026-04-24T19:28:48.644241'
+    - mensagem: 'latencia p99 acima do SLO: 342ms > 200ms'
+      nivel: WARN
+      servico: analytics
+      timestamp: '2026-04-24T19:31:48.644241'
+id: lon_944131bd
+timestamp: '2026-04-24T19:36:53.425116'

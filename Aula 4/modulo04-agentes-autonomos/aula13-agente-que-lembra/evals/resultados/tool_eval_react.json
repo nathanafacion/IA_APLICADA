@@ -1,0 +1,89 @@
+{
+  "arquitetura": "react",
+  "agente": "monitor-agent",
+  "total_casos": 8,
+  "tool_selection_accuracy": 1.0,
+  "argument_accuracy": 1.0,
+  "unnecessary_calls_rate": 0.0,
+  "wrong_tool_rate": 0.0,
+  "resultados_por_caso": [
+    {
+      "caso_id": "ts-001",
+      "tool_esperada": "consultar_metricas",
+      "tool_escolhida": "consultar_metricas",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "primeira acao deve ser coletar metricas do servico mencionado"
+    },
+    {
+      "caso_id": "ts-002",
+      "tool_esperada": "buscar_logs",
+      "tool_escolhida": "buscar_logs",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "apos confirmar metricas, proximo passo e buscar logs para entender causa"
+    },
+    {
+      "caso_id": "ts-003",
+      "tool_esperada": "historico_deploys",
+      "tool_escolhida": "historico_deploys",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "entrada menciona deploy, priorizacao de historico_deploys faz sentido"
+    },
+    {
+      "caso_id": "ts-004",
+      "tool_esperada": "buscar_logs_historico",
+      "tool_escolhida": "buscar_logs_historico",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "logs API ja coletados, buscar historico no banco para correlacao temporal"
+    },
+    {
+      "caso_id": "ts-005",
+      "tool_esperada": "buscar_issues",
+      "tool_escolhida": "buscar_issues",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "evidencias coletadas, buscar issues para correlacionar com incidente conhecido"
+    },
+    {
+      "caso_id": "ts-006",
+      "tool_esperada": "relatorio_incidente",
+      "tool_escolhida": "relatorio_incidente",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "todas evidencias coletadas, hora de registrar incidente"
+    },
+    {
+      "caso_id": "ts-007",
+      "tool_esperada": "consultar_metricas",
+      "tool_escolhida": "consultar_metricas",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "pedido de status comeca com metricas"
+    },
+    {
+      "caso_id": "ts-008",
+      "tool_esperada": "buscar_issues",
+      "tool_escolhida": "buscar_issues",
+      "tool_correta": true,
+      "arg_accuracy": 1.0,
+      "chamada_desnecessaria": false,
+      "justificativa_esperada": "pedido especifico sobre issues, ir direto na tool certa"
+    }
+  ],
+  "limiares": {
+    "tool_selection_accuracy": 0.8,
+    "unnecessary_calls_rate": 0.1,
+    "wrong_tool_rate": 0.15
+  },
+  "violacoes": []
+}

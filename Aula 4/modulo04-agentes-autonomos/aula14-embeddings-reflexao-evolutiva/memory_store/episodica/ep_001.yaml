@@ -1,0 +1,15 @@
+id: ep_001
+timestamp: "2025-03-15T14:40:00"
+conteudo:
+  objetivo: investigar alerta de latencia no servico de pagamentos
+  etapas_executadas: 5
+  ferramentas_chamadas:
+    - consultar_metricas
+    - buscar_logs
+    - historico_deploys
+    - relatorio_incidente
+  resultado_final: causa raiz identificada - deploy v2.3.1 sem canary
+  erros_encontrados: []
+  licoes_aprendidas:
+    - deploy sem canary causa degradacao gradual de latencia
+    - logs do servico de pagamentos demoram 2min pra indexar

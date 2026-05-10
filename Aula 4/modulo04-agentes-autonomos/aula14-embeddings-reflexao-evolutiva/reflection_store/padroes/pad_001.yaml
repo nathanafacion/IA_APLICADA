@@ -1,0 +1,6 @@
+id: pad_001
+timestamp: "2025-03-25T08:00:00"
+padrao: incidentes de latencia em servicos com PostgreSQL frequentemente estao relacionados a pool de conexoes
+frequencia: 4 de 6 incidentes analisados
+impacto: quando o agente investiga deploy primeiro perde em media 2 etapas
+ajuste_sugerido: para servicos com PostgreSQL verificar pool de conexoes ANTES de verificar deploy

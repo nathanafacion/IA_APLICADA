@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "monitor-mcp": {
+      "command": "python",
+      "args": ["mcp/server.py"],
+      "transport": "stdio",
+      "description": "MCP server para tools de monitoramento (issues, CI/CD)"
+    }
+  }
+}

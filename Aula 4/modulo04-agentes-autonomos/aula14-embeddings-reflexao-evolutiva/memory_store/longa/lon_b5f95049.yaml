@@ -1,0 +1,14 @@
+conteudo:
+  entrada:
+    janela_tempo_minutos: 60
+    nome_servico: pagamentos
+  ferramenta: consultar_metricas
+  observacoes:
+    coletado_em: '2026-04-24T19:19:42.604236'
+    latencia_p99_ms: 342.7
+    servico: pagamentos
+    status: degradado
+    taxa_erro: 4.2
+    vazao_rps: 1847
+id: lon_b5f95049
+timestamp: '2026-04-24T19:20:09.166273'

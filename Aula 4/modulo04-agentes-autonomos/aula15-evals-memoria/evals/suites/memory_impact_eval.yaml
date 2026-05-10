@@ -1,0 +1,24 @@
+# Eval Suite — Impacto de Memoria
+# Unidade 4
+
+dataset: memory_impact_cases.json
+
+comparativo:
+  baseline: execucao_sem_memoria
+  com_memoria: execucao_com_memoria
+
+metrics:
+  - retrieval_precision
+  - retrieval_recall
+  - memory_utilization
+  - hallucination_from_memory
+  - decision_improvement
+  - lesson_quality
+
+thresholds:
+  retrieval_precision: 0.8
+  retrieval_recall: 0.6
+  memory_utilization: 0.5
+  hallucination_from_memory: 0.02
+  decision_improvement: 0.15
+  lesson_quality: 0.4

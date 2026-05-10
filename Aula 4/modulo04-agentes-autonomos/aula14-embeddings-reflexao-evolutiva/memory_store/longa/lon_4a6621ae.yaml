@@ -1,0 +1,15 @@
+conteudo:
+  entrada:
+    janela_tempo_horas: 24
+    nome_servico: pagamentos
+  ferramenta: historico_deploys
+  observacoes:
+    contagem_total: 1
+    deploys:
+    - autor: ci/cd-pipeline
+      data_hora: '2026-04-24T18:34:51.856402'
+      mudancas: refactor connection pool settings
+      status: sucesso
+      versao: v2.4.1
+id: lon_4a6621ae
+timestamp: '2026-04-24T19:20:09.171747'

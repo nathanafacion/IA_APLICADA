@@ -1,0 +1,12 @@
+conteudo:
+  erros_encontrados: []
+  etapas_executadas: 3
+  ferramentas_chamadas:
+  - buscar_issues
+  - relatorio_incidente
+  objetivo: resolver_incidente
+  resultado_final: 'Incidente registrado com diagnóstico: timeout intermitente e latência
+    elevada após o deploy v2.4.1. Ação recomendada: reverter o deploy e investigar
+    a configuração do pool de conexões.'
+id: epi_01e8174f
+timestamp: '2026-04-24T19:35:37.715207'

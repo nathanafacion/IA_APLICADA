@@ -1,0 +1,11 @@
+conteudo:
+  erros_encontrados: []
+  etapas_executadas: 3
+  ferramentas_chamadas:
+  - consultar_metricas
+  - buscar_logs
+  - historico_deploys
+  objetivo: resolver_incidente
+  resultado_final: ''
+id: epi_52eaba8d
+timestamp: '2026-04-24T19:36:53.402444'

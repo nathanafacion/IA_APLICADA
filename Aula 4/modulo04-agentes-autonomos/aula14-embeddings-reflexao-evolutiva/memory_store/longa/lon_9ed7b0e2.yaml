@@ -1,0 +1,14 @@
+conteudo:
+  entrada:
+    janela_tempo_minutos: 5
+    nome_servico: checkout
+  ferramenta: consultar_metricas
+  observacoes:
+    coletado_em: '2026-04-24T19:34:39.991172'
+    latencia_p99_ms: 342.7
+    servico: checkout
+    status: degradado
+    taxa_erro: 4.2
+    vazao_rps: 1847
+id: lon_9ed7b0e2
+timestamp: '2026-04-24T19:34:50.058000'

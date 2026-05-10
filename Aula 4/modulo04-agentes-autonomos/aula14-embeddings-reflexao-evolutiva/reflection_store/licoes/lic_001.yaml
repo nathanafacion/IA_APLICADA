@@ -1,0 +1,6 @@
+id: lic_001
+timestamp: "2025-03-15T15:00:00"
+situacao: investigacao de latencia em servico com alta volumetria de logs
+acao: agente tentou buscar_logs imediatamente apos alerta
+resultado: logs ainda nao estavam indexados, busca retornou vazio
+licao: logs de servicos com alta volumetria demoram ate 5 minutos para indexar

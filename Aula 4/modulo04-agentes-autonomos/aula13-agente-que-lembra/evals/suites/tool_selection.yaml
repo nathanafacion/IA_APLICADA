@@ -1,0 +1,15 @@
+# Tool Selection Eval Suite
+# Mede se o agente escolhe a ferramenta certa para cada cenario.
+
+dataset: ../datasets/tool_selection_cases.json
+
+metricas:
+  - tool_selection_accuracy    # % de vezes que escolheu a tool correta
+  - argument_accuracy          # % de argumentos com valor correto
+  - unnecessary_calls_rate     # % de chamadas a tools que nao deveriam ser chamadas
+  - wrong_tool_rate            # % de vezes que escolheu tool errada
+
+limiares:
+  tool_selection_accuracy: 0.8     # minimo 80% de acertos
+  unnecessary_calls_rate: 0.1      # maximo 10% de chamadas desnecessarias
+  wrong_tool_rate: 0.15            # maximo 15% de tools erradas 

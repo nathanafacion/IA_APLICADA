@@ -1,0 +1,7 @@
+id: fact_002
+timestamp: "2025-03-15T14:32:00"
+conteudo:
+  fato: SLO do servico de pagamentos e 200ms p99
+  fonte: consultar_metricas
+  confianca: alta
+  dominio: servico de pagamentos

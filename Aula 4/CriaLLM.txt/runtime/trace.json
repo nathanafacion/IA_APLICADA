@@ -1,0 +1,999 @@
+{
+  "trace_id": "b3f5fca5cdce",
+  "tipo_agente": "autonomous",
+  "entrada": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io",
+  "evento": null,
+  "tempo_total_segundos": 0.05,
+  "tokens_consumidos": {
+    "prompt": 0,
+    "completion": 0,
+    "total": 0
+  },
+  "etapas": [
+    {
+      "etapa": 1,
+      "percepcao": "Objetivo: documentar_paginas\nEntrada: C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\nEtapa atual: 1",
+      "plano": {
+        "proxima_acao": "CHAMAR_FERRAMENTA",
+        "nome_ferramenta": "detectar_paginas",
+        "argumentos_ferramenta": {
+          "caminho_projeto": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io"
+        },
+        "criterio_sucesso": "detectar_paginas executada com sucesso"
+      },
+      "resultado_acao": {
+        "sucesso": true,
+        "dados": {
+          "tipo_projeto": "jekyll",
+          "paginas": [
+            {
+              "rota": "/",
+              "titulo": "Home",
+              "descricao": "Pagina /"
+            },
+            {
+              "rota": "/README",
+              "titulo": "Readme",
+              "descricao": "Pagina /README"
+            },
+            {
+              "rota": "/projetos",
+              "titulo": "Projetos",
+              "descricao": "Pagina /projetos"
+            },
+            {
+              "rota": "/tags",
+              "titulo": "Tags",
+              "descricao": "Pagina /tags"
+            },
+            {
+              "rota": "/.github/agents/blog-post.agent",
+              "titulo": "Blog Post.Agent",
+              "descricao": "Cria posts para o blog Jekyll da Nathana Facion. Use quando o usuário quiser criar um novo post, escrever um artigo, ou publicar conteúdo no blog. Gera o arquivo Markdown com frontmatter completo e um banner SVG temático de capa."
+            },
+            {
+              "rota": "/2026-04-10-busca-rag-carros-neo4j-nextjs",
+              "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+              "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+            },
+            {
+              "rota": "/2026-04-11-llms-txt-geo-futuro-busca-ia",
+              "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+              "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+            },
+            {
+              "rota": "/2026-04-12-core-web-vitals-performance-real",
+              "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+              "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+            },
+            {
+              "rota": "/2026-04-12-module-federation-micro-frontends",
+              "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+              "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+            },
+            {
+              "rota": "/2026-04-18-rules-agente-skills",
+              "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+              "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+            },
+            {
+              "rota": "/2026-05-10-runtime-agentes-autonomos",
+              "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+              "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+            },
+            {
+              "rota": "/public/pagina_index",
+              "titulo": "Pagina_Index",
+              "descricao": "Pagina /public/pagina_index"
+            },
+            {
+              "rota": "/public/choicesjs-setup",
+              "titulo": "Choicesjs Setup",
+              "descricao": "Pagina /public/choicesjs-setup"
+            },
+            {
+              "rota": "/blog/busca-rag-carros-neo4j-nextjs",
+              "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+              "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+            },
+            {
+              "rota": "/blog/llms-txt-geo-futuro-busca-ia",
+              "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+              "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+            },
+            {
+              "rota": "/blog/core-web-vitals-performance-real",
+              "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+              "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+            },
+            {
+              "rota": "/blog/module-federation-micro-frontends",
+              "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+              "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+            },
+            {
+              "rota": "/blog/rules-agente-skills",
+              "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+              "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+            },
+            {
+              "rota": "/blog/runtime-agentes-autonomos",
+              "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+              "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+            }
+          ],
+          "_entrada": {
+            "caminho_projeto": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io"
+          }
+        }
+      },
+      "avaliacao": {
+        "objetivo_alcancado": false,
+        "motivo": "etapa ok - criterio: detectar_paginas executada com sucesso",
+        "qualidade": "completa",
+        "problemas_saida": []
+      }
+    },
+    {
+      "etapa": 2,
+      "percepcao": "Objetivo: documentar_paginas\nEntrada: C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\nUltima etapa: ferramenta=detectar_paginas sucesso=True\nFerramentas ja chamadas: detectar_paginas=1\nEtapa atual: 2",
+      "plano": {
+        "proxima_acao": "CHAMAR_FERRAMENTA",
+        "nome_ferramenta": "gerar_md",
+        "argumentos_ferramenta": {
+          "paginas": [
+            {
+              "rota": "/",
+              "titulo": "Home",
+              "descricao": "Pagina /"
+            },
+            {
+              "rota": "/README",
+              "titulo": "Readme",
+              "descricao": "Pagina /README"
+            },
+            {
+              "rota": "/projetos",
+              "titulo": "Projetos",
+              "descricao": "Pagina /projetos"
+            },
+            {
+              "rota": "/tags",
+              "titulo": "Tags",
+              "descricao": "Pagina /tags"
+            },
+            {
+              "rota": "/.github/agents/blog-post.agent",
+              "titulo": "Blog Post.Agent",
+              "descricao": "Cria posts para o blog Jekyll da Nathana Facion. Use quando o usuário quiser criar um novo post, escrever um artigo, ou publicar conteúdo no blog. Gera o arquivo Markdown com frontmatter completo e um banner SVG temático de capa."
+            },
+            {
+              "rota": "/2026-04-10-busca-rag-carros-neo4j-nextjs",
+              "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+              "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+            },
+            {
+              "rota": "/2026-04-11-llms-txt-geo-futuro-busca-ia",
+              "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+              "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+            },
+            {
+              "rota": "/2026-04-12-core-web-vitals-performance-real",
+              "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+              "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+            },
+            {
+              "rota": "/2026-04-12-module-federation-micro-frontends",
+              "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+              "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+            },
+            {
+              "rota": "/2026-04-18-rules-agente-skills",
+              "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+              "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+            },
+            {
+              "rota": "/2026-05-10-runtime-agentes-autonomos",
+              "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+              "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+            },
+            {
+              "rota": "/public/pagina_index",
+              "titulo": "Pagina_Index",
+              "descricao": "Pagina /public/pagina_index"
+            },
+            {
+              "rota": "/public/choicesjs-setup",
+              "titulo": "Choicesjs Setup",
+              "descricao": "Pagina /public/choicesjs-setup"
+            },
+            {
+              "rota": "/blog/busca-rag-carros-neo4j-nextjs",
+              "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+              "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+            },
+            {
+              "rota": "/blog/llms-txt-geo-futuro-busca-ia",
+              "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+              "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+            },
+            {
+              "rota": "/blog/core-web-vitals-performance-real",
+              "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+              "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+            },
+            {
+              "rota": "/blog/module-federation-micro-frontends",
+              "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+              "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+            },
+            {
+              "rota": "/blog/rules-agente-skills",
+              "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+              "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+            },
+            {
+              "rota": "/blog/runtime-agentes-autonomos",
+              "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+              "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+            }
+          ],
+          "caminho_saida": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public"
+        },
+        "criterio_sucesso": "gerar_md executada com sucesso"
+      },
+      "resultado_acao": {
+        "sucesso": true,
+        "dados": {
+          "arquivos_gerados": [
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_index.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_README.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_projetos.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_tags.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina__github_agents_blog_post_agent.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_2026_04_10_busca_rag_carros_neo4j_nextjs.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_2026_04_11_llms_txt_geo_futuro_busca_ia.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_2026_04_12_core_web_vitals_performance_real.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_2026_04_12_module_federation_micro_frontends.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_2026_04_18_rules_agente_skills.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_2026_05_10_runtime_agentes_autonomos.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_public_pagina_index.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_public_choicesjs_setup.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_blog_busca_rag_carros_neo4j_nextjs.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_blog_llms_txt_geo_futuro_busca_ia.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_blog_core_web_vitals_performance_real.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_blog_module_federation_micro_frontends.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_blog_rules_agente_skills.md",
+            "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\pagina_blog_runtime_agentes_autonomos.md"
+          ],
+          "_entrada": {
+            "paginas": [
+              {
+                "rota": "/",
+                "titulo": "Home",
+                "descricao": "Pagina /"
+              },
+              {
+                "rota": "/README",
+                "titulo": "Readme",
+                "descricao": "Pagina /README"
+              },
+              {
+                "rota": "/projetos",
+                "titulo": "Projetos",
+                "descricao": "Pagina /projetos"
+              },
+              {
+                "rota": "/tags",
+                "titulo": "Tags",
+                "descricao": "Pagina /tags"
+              },
+              {
+                "rota": "/.github/agents/blog-post.agent",
+                "titulo": "Blog Post.Agent",
+                "descricao": "Cria posts para o blog Jekyll da Nathana Facion. Use quando o usuário quiser criar um novo post, escrever um artigo, ou publicar conteúdo no blog. Gera o arquivo Markdown com frontmatter completo e um banner SVG temático de capa."
+              },
+              {
+                "rota": "/2026-04-10-busca-rag-carros-neo4j-nextjs",
+                "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+                "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+              },
+              {
+                "rota": "/2026-04-11-llms-txt-geo-futuro-busca-ia",
+                "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+                "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+              },
+              {
+                "rota": "/2026-04-12-core-web-vitals-performance-real",
+                "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+                "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+              },
+              {
+                "rota": "/2026-04-12-module-federation-micro-frontends",
+                "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+                "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+              },
+              {
+                "rota": "/2026-04-18-rules-agente-skills",
+                "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+                "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+              },
+              {
+                "rota": "/2026-05-10-runtime-agentes-autonomos",
+                "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+                "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+              },
+              {
+                "rota": "/public/pagina_index",
+                "titulo": "Pagina_Index",
+                "descricao": "Pagina /public/pagina_index"
+              },
+              {
+                "rota": "/public/choicesjs-setup",
+                "titulo": "Choicesjs Setup",
+                "descricao": "Pagina /public/choicesjs-setup"
+              },
+              {
+                "rota": "/blog/busca-rag-carros-neo4j-nextjs",
+                "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+                "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+              },
+              {
+                "rota": "/blog/llms-txt-geo-futuro-busca-ia",
+                "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+                "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+              },
+              {
+                "rota": "/blog/core-web-vitals-performance-real",
+                "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+                "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+              },
+              {
+                "rota": "/blog/module-federation-micro-frontends",
+                "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+                "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+              },
+              {
+                "rota": "/blog/rules-agente-skills",
+                "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+                "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+              },
+              {
+                "rota": "/blog/runtime-agentes-autonomos",
+                "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+                "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+              }
+            ],
+            "caminho_saida": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public"
+          }
+        }
+      },
+      "avaliacao": {
+        "objetivo_alcancado": false,
+        "motivo": "etapa ok - criterio: gerar_md executada com sucesso",
+        "qualidade": "completa",
+        "problemas_saida": []
+      }
+    },
+    {
+      "etapa": 3,
+      "percepcao": "Objetivo: documentar_paginas\nEntrada: C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\nUltima etapa: ferramenta=gerar_md sucesso=True\nFerramentas ja chamadas: detectar_paginas=1, gerar_md=1\nEtapa atual: 3",
+      "plano": {
+        "proxima_acao": "CHAMAR_FERRAMENTA",
+        "nome_ferramenta": "gerar_llms_txt",
+        "argumentos_ferramenta": {
+          "paginas": [
+            {
+              "rota": "/",
+              "titulo": "Home",
+              "descricao": "Pagina /"
+            },
+            {
+              "rota": "/README",
+              "titulo": "Readme",
+              "descricao": "Pagina /README"
+            },
+            {
+              "rota": "/projetos",
+              "titulo": "Projetos",
+              "descricao": "Pagina /projetos"
+            },
+            {
+              "rota": "/tags",
+              "titulo": "Tags",
+              "descricao": "Pagina /tags"
+            },
+            {
+              "rota": "/.github/agents/blog-post.agent",
+              "titulo": "Blog Post.Agent",
+              "descricao": "Cria posts para o blog Jekyll da Nathana Facion. Use quando o usuário quiser criar um novo post, escrever um artigo, ou publicar conteúdo no blog. Gera o arquivo Markdown com frontmatter completo e um banner SVG temático de capa."
+            },
+            {
+              "rota": "/2026-04-10-busca-rag-carros-neo4j-nextjs",
+              "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+              "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+            },
+            {
+              "rota": "/2026-04-11-llms-txt-geo-futuro-busca-ia",
+              "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+              "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+            },
+            {
+              "rota": "/2026-04-12-core-web-vitals-performance-real",
+              "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+              "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+            },
+            {
+              "rota": "/2026-04-12-module-federation-micro-frontends",
+              "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+              "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+            },
+            {
+              "rota": "/2026-04-18-rules-agente-skills",
+              "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+              "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+            },
+            {
+              "rota": "/2026-05-10-runtime-agentes-autonomos",
+              "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+              "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+            },
+            {
+              "rota": "/public/pagina_index",
+              "titulo": "Pagina_Index",
+              "descricao": "Pagina /public/pagina_index"
+            },
+            {
+              "rota": "/public/choicesjs-setup",
+              "titulo": "Choicesjs Setup",
+              "descricao": "Pagina /public/choicesjs-setup"
+            },
+            {
+              "rota": "/blog/busca-rag-carros-neo4j-nextjs",
+              "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+              "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+            },
+            {
+              "rota": "/blog/llms-txt-geo-futuro-busca-ia",
+              "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+              "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+            },
+            {
+              "rota": "/blog/core-web-vitals-performance-real",
+              "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+              "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+            },
+            {
+              "rota": "/blog/module-federation-micro-frontends",
+              "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+              "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+            },
+            {
+              "rota": "/blog/rules-agente-skills",
+              "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+              "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+            },
+            {
+              "rota": "/blog/runtime-agentes-autonomos",
+              "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+              "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+            }
+          ],
+          "tipo_projeto": "jekyll",
+          "caminho_saida": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public"
+        },
+        "criterio_sucesso": "gerar_llms_txt executada com sucesso"
+      },
+      "resultado_acao": {
+        "sucesso": true,
+        "dados": {
+          "arquivo_llms_txt": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public\\llms.txt",
+          "_entrada": {
+            "paginas": [
+              {
+                "rota": "/",
+                "titulo": "Home",
+                "descricao": "Pagina /"
+              },
+              {
+                "rota": "/README",
+                "titulo": "Readme",
+                "descricao": "Pagina /README"
+              },
+              {
+                "rota": "/projetos",
+                "titulo": "Projetos",
+                "descricao": "Pagina /projetos"
+              },
+              {
+                "rota": "/tags",
+                "titulo": "Tags",
+                "descricao": "Pagina /tags"
+              },
+              {
+                "rota": "/.github/agents/blog-post.agent",
+                "titulo": "Blog Post.Agent",
+                "descricao": "Cria posts para o blog Jekyll da Nathana Facion. Use quando o usuário quiser criar um novo post, escrever um artigo, ou publicar conteúdo no blog. Gera o arquivo Markdown com frontmatter completo e um banner SVG temático de capa."
+              },
+              {
+                "rota": "/2026-04-10-busca-rag-carros-neo4j-nextjs",
+                "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+                "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+              },
+              {
+                "rota": "/2026-04-11-llms-txt-geo-futuro-busca-ia",
+                "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+                "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+              },
+              {
+                "rota": "/2026-04-12-core-web-vitals-performance-real",
+                "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+                "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+              },
+              {
+                "rota": "/2026-04-12-module-federation-micro-frontends",
+                "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+                "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+              },
+              {
+                "rota": "/2026-04-18-rules-agente-skills",
+                "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+                "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+              },
+              {
+                "rota": "/2026-05-10-runtime-agentes-autonomos",
+                "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+                "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+              },
+              {
+                "rota": "/public/pagina_index",
+                "titulo": "Pagina_Index",
+                "descricao": "Pagina /public/pagina_index"
+              },
+              {
+                "rota": "/public/choicesjs-setup",
+                "titulo": "Choicesjs Setup",
+                "descricao": "Pagina /public/choicesjs-setup"
+              },
+              {
+                "rota": "/blog/busca-rag-carros-neo4j-nextjs",
+                "titulo": "Construindo uma Busca Inteligente de Carros com RAG, Neo4j e Next.js",
+                "descricao": "Aprenda a construir do zero uma aplicação de busca por similaridade semântica usando RAG (Retrieval-Augmented Generation) com Neo4j, embeddings vetoriais e GPT-4o-mini. Tutorial completo com Next.js, TypeScript e Docker."
+              },
+              {
+                "rota": "/blog/llms-txt-geo-futuro-busca-ia",
+                "titulo": "Do robots.txt ao llms.txt: Como Preparar Seu Site Para a Era da IA com GEO",
+                "descricao": "Entenda o novo padrão llms.txt proposto por Jeremy Howard, como funciona o GEO (Generative Engine Optimization) e por que otimizar seu conteúdo para LLMs é tão importante quanto SEO. Guia prático com exemplos reais."
+              },
+              {
+                "rota": "/blog/core-web-vitals-performance-real",
+                "titulo": "Core Web Vitals em 2026: Seu Site é Rápido ou Apenas Parece Rápido?",
+                "descricao": "Entenda as 3 métricas que o Google usa para medir a experiência real do usuário — LCP, CLS e INP — e como otimizá-las para melhorar ranqueamento e conversão do seu site."
+              },
+              {
+                "rota": "/blog/module-federation-micro-frontends",
+                "titulo": "Module Federation: Compartilhando Código Entre Micro-Frontends em Tempo Real",
+                "descricao": "Entenda como o Module Federation do Webpack 5 revolucionou a arquitetura de micro-frontends, permitindo compartilhar componentes entre aplicações sem NPM install ou rebuild."
+              },
+              {
+                "rota": "/blog/rules-agente-skills",
+                "titulo": "Rules, Agente e Skills: Entendendo os Blocos de IA Autônoma",
+                "descricao": "Descubra a diferença entre rules, agente e skills em sistemas de IA e automação. Veja exemplos práticos e entenda como esses conceitos se conectam para criar agentes inteligentes e flexíveis."
+              },
+              {
+                "rota": "/blog/runtime-agentes-autonomos",
+                "titulo": "Por Dentro do Runtime: Como um Agente Autônomo Realmente Funciona",
+                "descricao": "Uma análise técnica completa de um runtime de agentes autônomos: 9 contratos YAML, 7 módulos Python, circuit breaker, telemetria estruturada, e todos os padrões de engenharia de software que fazem um agente ser um produto auditável."
+              }
+            ],
+            "tipo_projeto": "jekyll",
+            "caminho_saida": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\\public"
+          }
+        }
+      },
+      "avaliacao": {
+        "objetivo_alcancado": false,
+        "motivo": "etapa ok - criterio: gerar_llms_txt executada com sucesso",
+        "qualidade": "completa",
+        "problemas_saida": []
+      }
+    },
+    {
+      "etapa": 4,
+      "percepcao": "Objetivo: documentar_paginas\nEntrada: C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io\nUltima etapa: ferramenta=gerar_llms_txt sucesso=True\nFerramentas ja chamadas: detectar_paginas=1, gerar_md=1, gerar_llms_txt=1\nEtapa atual: 4",
+      "plano": {
+        "proxima_acao": "FINALIZAR",
+        "nome_ferramenta": null,
+        "argumentos_ferramenta": {},
+        "criterio_sucesso": "todas as ferramentas executadas"
+      },
+      "resultado_acao": null,
+      "avaliacao": {
+        "objetivo_alcancado": true,
+        "motivo": "todas as ferramentas executadas"
+      }
+    }
+  ],
+  "resumo": "Objetivo: documentar_paginas\nEtapas executadas: 4\nFerramentas chamadas: detectar_paginas, gerar_md, gerar_llms_txt\nResultado: todas as ferramentas executadas\nTipo: autonomous",
+  "telemetry_stream": [
+    {
+      "timestamp": "2026-05-10T13:02:14.592827",
+      "elapsed_ms": 0,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "inicio",
+      "dados": {
+        "entrada": "C:\\Users\\nathana\\Desktop\\IA\\nathanafacion.github.io",
+        "objetivo": "documentar_paginas",
+        "max_etapas": 10,
+        "max_tokens": 50000
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.601546",
+      "elapsed_ms": 9,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_perceber",
+      "dados": {
+        "etapa": 1,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.601546",
+      "elapsed_ms": 9,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_planejar",
+      "dados": {
+        "etapa": 1,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.601546",
+      "elapsed_ms": 9,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "plano_gerado",
+      "dados": {
+        "proxima_acao": "CHAMAR_FERRAMENTA",
+        "nome_ferramenta": "detectar_paginas",
+        "criterio_sucesso": "detectar_paginas executada com sucesso"
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.601546",
+      "elapsed_ms": 9,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_validar_payload",
+      "dados": {
+        "etapa": 1,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_agir",
+      "dados": {
+        "etapa": 1,
+        "duracao_ms": 28
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "ferramenta_executada",
+      "dados": {
+        "ferramenta": "detectar_paginas",
+        "sucesso": true,
+        "duracao_ms": 28,
+        "tokens": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_avaliar",
+      "dados": {
+        "etapa": 1,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_perceber",
+      "dados": {
+        "etapa": 2,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_planejar",
+      "dados": {
+        "etapa": 2,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "plano_gerado",
+      "dados": {
+        "proxima_acao": "CHAMAR_FERRAMENTA",
+        "nome_ferramenta": "gerar_md",
+        "criterio_sucesso": "gerar_md executada com sucesso"
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_validar_payload",
+      "dados": {
+        "etapa": 2,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_agir",
+      "dados": {
+        "etapa": 2,
+        "duracao_ms": 14
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "ferramenta_executada",
+      "dados": {
+        "ferramenta": "gerar_md",
+        "sucesso": true,
+        "duracao_ms": 14,
+        "tokens": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_avaliar",
+      "dados": {
+        "etapa": 2,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_perceber",
+      "dados": {
+        "etapa": 3,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_planejar",
+      "dados": {
+        "etapa": 3,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "plano_gerado",
+      "dados": {
+        "proxima_acao": "CHAMAR_FERRAMENTA",
+        "nome_ferramenta": "gerar_llms_txt",
+        "criterio_sucesso": "gerar_llms_txt executada com sucesso"
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_validar_payload",
+      "dados": {
+        "etapa": 3,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_agir",
+      "dados": {
+        "etapa": 3,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "ferramenta_executada",
+      "dados": {
+        "ferramenta": "gerar_llms_txt",
+        "sucesso": true,
+        "duracao_ms": 0,
+        "tokens": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_avaliar",
+      "dados": {
+        "etapa": 3,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_perceber",
+      "dados": {
+        "etapa": 4,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_planejar",
+      "dados": {
+        "etapa": 4,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "plano_gerado",
+      "dados": {
+        "proxima_acao": "FINALIZAR",
+        "nome_ferramenta": null,
+        "criterio_sucesso": "todas as ferramentas executadas"
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "fase_avaliar",
+      "dados": {
+        "etapa": 4,
+        "duracao_ms": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "finalizado",
+      "dados": {
+        "etapas": 4,
+        "resultado": "todas as ferramentas executadas",
+        "tokens_total": 0
+      }
+    }
+  ],
+  "audit_logs": [
+    {
+      "timestamp": "2026-05-10T13:02:14.629103",
+      "elapsed_ms": 36,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "ferramenta_executada",
+      "dados": {
+        "ferramenta": "detectar_paginas",
+        "sucesso": true,
+        "duracao_ms": 28,
+        "tokens": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "ferramenta_executada",
+      "dados": {
+        "ferramenta": "gerar_md",
+        "sucesso": true,
+        "duracao_ms": 14,
+        "tokens": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "ferramenta_executada",
+      "dados": {
+        "ferramenta": "gerar_llms_txt",
+        "sucesso": true,
+        "duracao_ms": 0,
+        "tokens": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-10T13:02:14.643367",
+      "elapsed_ms": 51,
+      "trace_id": "b3f5fca5cdce",
+      "tipo": "finalizado",
+      "dados": {
+        "etapas": 4,
+        "resultado": "todas as ferramentas executadas",
+        "tokens_total": 0
+      }
+    }
+  ],
+  "health_metrics": {
+    "taxa_sucesso_ferramentas": 100.0,
+    "total_chamadas_ferramenta": 3,
+    "circuit_breaker_ativacoes": 0,
+    "validacao_payload_falhas": 0,
+    "chamadas_llm": 0
+  },
+  "performance_data": {
+    "fases": {
+      "perceber": {
+        "total_ms": 0,
+        "max_ms": 0,
+        "contagem": 4,
+        "media_ms": 0
+      },
+      "planejar": {
+        "total_ms": 0,
+        "max_ms": 0,
+        "contagem": 4,
+        "media_ms": 0
+      },
+      "validar_payload": {
+        "total_ms": 0,
+        "max_ms": 0,
+        "contagem": 3,
+        "media_ms": 0
+      },
+      "agir": {
+        "total_ms": 42,
+        "max_ms": 28,
+        "contagem": 3,
+        "media_ms": 14
+      },
+      "avaliar": {
+        "total_ms": 0,
+        "max_ms": 0,
+        "contagem": 4,
+        "media_ms": 0
+      }
+    },
+    "tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "total": 0
+    },
+    "chamadas_llm": 0
+  }
+}

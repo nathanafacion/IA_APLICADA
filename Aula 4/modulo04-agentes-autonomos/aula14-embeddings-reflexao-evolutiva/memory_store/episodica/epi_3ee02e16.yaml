@@ -1,0 +1,15 @@
+conteudo:
+  erros_encontrados: []
+  etapas_executadas: 6
+  ferramentas_chamadas:
+  - consultar_metricas
+  - buscar_logs
+  - historico_deploys
+  - buscar_issues
+  - relatorio_incidente
+  objetivo: resolver_incidente
+  resultado_final: 'Incidente registrado com diagnóstico: latência elevada após o
+    deploy v2.4.1 e recomendação: reverter o deploy e investigar a configuração do
+    pool de conexões.'
+id: epi_3ee02e16
+timestamp: '2026-04-24T19:20:09.154092'

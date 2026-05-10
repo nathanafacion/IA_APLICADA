@@ -1,0 +1,57 @@
+[
+  {
+    "id": "case_001",
+    "entrada": "alerta de latencia no servico de pagamentos",
+    "contexto_esperado": {
+      "fatos_relevantes": ["servico de pagamentos usa PostgreSQL 14", "SLO e 200ms p99"],
+      "episodios_relevantes": ["ep_001: deploy v2.3.1 sem canary causou latencia"],
+      "licoes_relevantes": ["lic_002: verificar deploys no inicio"]
+    },
+    "decisao_esperada": "verificar deploy recente primeiro",
+    "resultado_esperado": "diagnostico correto com causa raiz"
+  },
+  {
+    "id": "case_002",
+    "entrada": "erro 500 intermitente no servico de pedidos",
+    "contexto_esperado": {
+      "fatos_relevantes": ["servico de pedidos usa conexao com timeout de 30s"],
+      "episodios_relevantes": ["ep_003: pool de conexoes esgotado"],
+      "licoes_relevantes": ["lic_003: verificar recursos de infraestrutura"]
+    },
+    "decisao_esperada": "verificar pool de conexoes",
+    "resultado_esperado": "diagnostico correto"
+  },
+  {
+    "id": "case_003",
+    "entrada": "timeout no servico de autenticacao",
+    "contexto_esperado": {
+      "fatos_relevantes": [],
+      "episodios_relevantes": [],
+      "licoes_relevantes": ["lic_001: logs de alta volumetria demoram para indexar"]
+    },
+    "decisao_esperada": "investigar metricas primeiro, aguardar antes de consultar logs",
+    "resultado_esperado": "diagnostico mesmo sem historico"
+  },
+  {
+    "id": "case_004",
+    "entrada": "alerta de CPU alta no servico de notificacoes",
+    "contexto_esperado": {
+      "fatos_relevantes": ["servico de notificacoes usa Redis como cache"],
+      "episodios_relevantes": [],
+      "licoes_relevantes": []
+    },
+    "decisao_esperada": "investigar metricas de CPU e cache Redis",
+    "resultado_esperado": "diagnostico correto"
+  },
+  {
+    "id": "case_005",
+    "entrada": "latencia alta no servico de pagamentos apos deploy",
+    "contexto_esperado": {
+      "fatos_relevantes": ["PostgreSQL 14", "SLO 200ms", "rollback manual"],
+      "episodios_relevantes": ["ep_001: deploy sem canary"],
+      "licoes_relevantes": ["lic_002: verificar deploys", "lic_003: verificar infra"]
+    },
+    "decisao_esperada": "verificar deploy e pool em paralelo",
+    "resultado_esperado": "diagnostico rapido com recomendacao de rollback"
+  }
+]

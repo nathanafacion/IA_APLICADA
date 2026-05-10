@@ -1,0 +1,32 @@
+conteudo:
+  entrada:
+    estado: open
+    labels:
+    - bug
+    - p1
+    repositorio: checkout
+  ferramenta: buscar_issues
+  observacoes:
+    contagem_total: 2
+    issues:
+    - autor: eng-oncall
+      criado_em: '2026-04-24T17:35:17.856735'
+      estado: open
+      labels:
+      - bug
+      - p1
+      - producao
+      numero: 142
+      repositorio: checkout
+      titulo: Latencia elevada apos deploy v2.4.1
+    - autor: monitoring-bot
+      criado_em: '2026-04-24T14:35:17.856735'
+      estado: open
+      labels:
+      - bug
+      - p2
+      numero: 138
+      repositorio: checkout
+      titulo: Circuit breaker ativando para upstream-payments
+id: lon_305ff51b
+timestamp: '2026-04-24T19:35:37.732871'

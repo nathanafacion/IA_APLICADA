@@ -1,0 +1,33 @@
+atualizado_em: '2026-04-24T19:36:22.007580'
+conteudo:
+  entrada:
+    estado: estado_sem_api_key
+    labels:
+    - item: labels_1
+    - item: labels_2
+    repositorio: repositorio_sem_api_key
+  ferramenta: buscar_issues
+  observacoes:
+    contagem_total: 2
+    issues:
+    - autor: eng-oncall
+      criado_em: '2026-04-24T17:36:15.037991'
+      estado: open
+      labels:
+      - bug
+      - p1
+      - producao
+      numero: 142
+      repositorio: repositorio_sem_api_key
+      titulo: Latencia elevada apos deploy v2.4.1
+    - autor: monitoring-bot
+      criado_em: '2026-04-24T14:36:15.037991'
+      estado: open
+      labels:
+      - bug
+      - p2
+      numero: 138
+      repositorio: repositorio_sem_api_key
+      titulo: Circuit breaker ativando para upstream-payments
+id: lon_d1791ba3
+timestamp: '2026-04-24T19:20:25.610291'

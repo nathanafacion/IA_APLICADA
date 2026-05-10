@@ -1,0 +1,6 @@
+id: lic_002
+timestamp: "2025-03-15T16:00:00"
+situacao: investigacao de latencia no servico de pagamentos
+acao: agente verificou metricas e logs mas nao verificou deploys
+resultado: causa raiz era deploy sem canary, descoberto apenas na etapa 4
+licao: verificar historico de deploys logo no inicio da investigacao

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ts-001",
+    "entrada": "alerta de latencia p99 acima de 500ms no servico de pagamentos",
+    "etapa": 1,
+    "contexto": "primeira etapa, sem evidencias anteriores",
+    "ferramentas_ja_usadas": [],
+    "tool_esperada": "consultar_metricas",
+    "argumentos_esperados": {
+      "nome_servico": "pagamentos"
+    },
+    "tools_nao_esperadas": ["relatorio_incidente", "buscar_issues"],
+    "justificativa": "primeira acao deve ser coletar metricas do servico mencionado"
+  },
+  {
+    "id": "ts-002",
+    "entrada": "alerta de latencia p99 acima de 500ms no servico de pagamentos",
+    "etapa": 2,
+    "contexto": "metricas ja coletadas, latencia confirmada em 520ms, taxa de erro 8%",
+    "ferramentas_ja_usadas": ["consultar_metricas"],
+    "tool_esperada": "buscar_logs",
+    "argumentos_esperados": {
+      "nome_servico": "pagamentos"
+    },
+    "tools_nao_esperadas": ["consultar_metricas"],
+    "justificativa": "apos confirmar metricas, proximo passo e buscar logs para entender causa"
+  },
+  {
+    "id": "ts-003",
+    "entrada": "erro 500 intermitente no checkout apos deploy",
+    "etapa": 1,
+    "contexto": "primeira etapa, entrada menciona deploy",
+    "ferramentas_ja_usadas": [],
+    "tool_esperada": "historico_deploys",
+    "argumentos_esperados": {
+      "nome_servico": "checkout"
+    },
+    "tools_nao_esperadas": ["relatorio_incidente"],
+    "justificativa": "entrada menciona deploy, priorizacao de historico_deploys faz sentido"
+  },
+  {
+    "id": "ts-004",
+    "entrada": "queda de throughput no servico de autenticacao",
+    "etapa": 3,
+    "contexto": "metricas e logs recentes ja coletados, logs indicam erros de conexao com banco. precisa investigar padrao historico para correlacao temporal",
+    "ferramentas_ja_usadas": ["consultar_metricas", "buscar_logs"],
+    "tool_esperada": "buscar_logs_historico",
+    "argumentos_esperados": {
+      "nome_servico": "autenticacao"
+    },
+    "tools_nao_esperadas": ["consultar_metricas"],
+    "justificativa": "logs API ja coletados, buscar historico no banco para correlacao temporal"
+  },
+  {
+    "id": "ts-005",
+    "entrada": "alerta de latencia no checkout, possivel relacao com deploy recente",
+    "etapa": 4,
+    "contexto": "metricas, logs e deploys coletados. deploy v2.4.1 ha 45min coincide com degradacao",
+    "ferramentas_ja_usadas": ["consultar_metricas", "buscar_logs", "historico_deploys"],
+    "tool_esperada": "buscar_issues",
+    "argumentos_esperados": {
+      "repositorio": "checkout"
+    },
+    "tools_nao_esperadas": ["consultar_metricas", "buscar_logs"],
+    "justificativa": "evidencias coletadas, buscar issues para correlacionar com incidente conhecido"
+  },
+  {
+    "id": "ts-006",
+    "entrada": "alerta de latencia no servico de pagamentos",
+    "etapa": 5,
+    "contexto": "todas as evidencias coletadas: metricas (p99=450ms), logs (timeout upstream), deploys (v2.3.1 ha 30min), issues (#142 aberta)",
+    "ferramentas_ja_usadas": ["consultar_metricas", "buscar_logs", "historico_deploys", "buscar_issues"],
+    "tool_esperada": "relatorio_incidente",
+    "argumentos_esperados": {
+      "nome_servico": "pagamentos",
+      "severidade": "alta"
+    },
+    "tools_nao_esperadas": ["consultar_metricas", "buscar_logs"],
+    "justificativa": "todas evidencias coletadas, hora de registrar incidente"
+  },
+  {
+    "id": "ts-007",
+    "entrada": "verificar status geral do servico de notificacoes",
+    "etapa": 1,
+    "contexto": "primeira etapa, pedido generico de status",
+    "ferramentas_ja_usadas": [],
+    "tool_esperada": "consultar_metricas",
+    "argumentos_esperados": {
+      "nome_servico": "notificacoes"
+    },
+    "tools_nao_esperadas": ["relatorio_incidente", "buscar_issues"],
+    "justificativa": "pedido de status comeca com metricas"
+  },
+  {
+    "id": "ts-008",
+    "entrada": "investigar se ha issues abertas relacionadas ao deploy do gateway",
+    "etapa": 1,
+    "contexto": "primeira etapa, pedido especifico sobre issues",
+    "ferramentas_ja_usadas": [],
+    "tool_esperada": "buscar_issues",
+    "argumentos_esperados": {
+      "repositorio": "gateway"
+    },
+    "tools_nao_esperadas": ["consultar_metricas", "relatorio_incidente"],
+    "justificativa": "pedido especifico sobre issues, ir direto na tool certa"
+  }
+]
