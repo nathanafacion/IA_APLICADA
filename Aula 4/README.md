@@ -31,6 +31,18 @@ Aula 4/
 
 ## 🏗️ CriaLLM — o Projeto Entregável
 
+### Por que o nome "CriaLLM.txt"?
+
+O nome é uma referência direta ao padrão **`llms.txt`** — um arquivo de texto simples colocado na raiz de um site (ex.: `https://meusite.com/llms.txt`) que descreve as páginas e rotas do projeto em um formato que modelos de linguagem conseguem consumir com facilidade.
+
+O problema que motiva o projeto é real: LLMs não navegam em sites como humanos. Ao responder perguntas sobre um produto, uma documentação ou um blog, o modelo precisa saber **o que existe no site** — quais páginas há, o que cada uma contém, como elas se relacionam. Sem isso, o modelo alucina URLs, descreve rotas que não existem ou ignora seções inteiras.
+
+O `llms.txt` resolve isso da mesma forma que o `robots.txt` resolve a descoberta de conteúdo para crawlers de busca: é um contrato explícito, legível por máquina, que mapeia a estrutura do site. Com ele, ferramentas como Claude, ChatGPT, Copilot e agentes autônomos conseguem entender a arquitetura de um site **sem precisar fazer scraping página a página**.
+
+O agente de exemplo (`rota-monitor-agent`) automatiza exatamente essa tarefa: dado o caminho raiz de um projeto **Jekyll, Next.js ou React Router**, ele detecta todas as páginas e rotas, gera um arquivo Markdown de documentação para cada uma e produz o `llms.txt` no padrão [llmstxt.org](https://llmstxt.org). O runtime CriaLLM é a infraestrutura genérica que executa esse agente — e qualquer outro que você queira criar.
+
+---
+
 O **CriaLLM** é um runtime de agentes autônomos que separa completamente o _o que o agente faz_ (contratos em Markdown) do _como ele faz_ (módulos Python). Criar um novo agente é apenas escrever arquivos `.md` — sem tocar no código do runtime.
 
 Cada agente é uma pasta com até 7 arquivos de contrato:
