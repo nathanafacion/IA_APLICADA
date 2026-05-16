@@ -143,6 +143,40 @@ Aplicação Next.js que analisa títulos e descrições de conteúdo usando dado
 - Funcionalidades: Análise de potencial viral de títulos, score 0-100 com feedback, sugestões de títulos otimizados por LLM, dashboard de tendências, gráficos interativos, 85 testes unitários e de integração
 - Arquitetura: Screaming Architecture organizada por features
 
+### Aula 4 — Agentes Autônomos: do Contrato ao Runtime
+
+Foco na construção de **agentes autônomos orientados a contratos** — o comportamento do agente é definido inteiramente por arquivos Markdown/YAML, e o runtime Python é agnóstico ao domínio. A aula cobre 13 módulos evolutivos (aula03 a aula15), partindo de contratos declarativos até memória semântica, reflexão evolutiva e evals mensuráveis.
+
+#### 📁 CriaLLM
+
+Runtime de agentes autônomos baseado em contratos YAML declarados em arquivos Markdown. Criar um novo agente é apenas escrever arquivos `.md` — sem tocar no código do runtime. Inclui o `rota-monitor-agent`, que monitora rotas de navegação em projetos Jekyll, Next.js e React Router.
+
+- **Tecnologias:** Python, OpenAI GPT-4o-mini (modo mock disponível sem chave de API)
+- **Conceito central:** Contract-Driven Agents — runtime agnóstico, contrato declarativo
+- **Funcionalidades:** Ciclo perceber → planejar → agir → avaliar, circuit breaker, telemetria, CLI completa (`rodar`, `validar`, `rastreamento`, `replay`, `analisar`, `benchmark`, `tool-eval`, `memory-eval`)
+
+#### 📁 modulo04-agentes-autonomos
+
+Evolução incremental do runtime ao longo de 13 módulos:
+
+| Módulo     | Tema                                                               |
+| ---------- | ------------------------------------------------------------------ |
+| **aula03** | Os 9 contratos Markdown que definem um agente                      |
+| **aula04** | Por dentro do runtime — 6 módulos Python e como cada YAML é lido   |
+| **aula05** | Observabilidade em 4 níveis com o agente `trace-analyzer`          |
+| **aula06** | 4 tipos de agente + agente `backlog-decomposer` (goal_oriented)    |
+| **aula07** | Arquiteturas cognitivas como contrato + ReAct                      |
+| **aula08** | Plan-Execute e Reflection — duas novas arquiteturas                |
+| **aula09** | Evals, benchmark comparativo e equivalências LangChain/LangGraph   |
+| **aula10** | Padrão Adapter + tools REST reais (FastAPI local)                  |
+| **aula11** | Adapter de banco de dados, MCP e segurança declarativa no contrato |
+| **aula12** | Tool selection eval com gabarito explícito e 4 métricas            |
+| **aula13** | 4 tipos de memória (curta, longa, episódica, contextual)           |
+| **aula14** | Embeddings, busca semântica e reflexão evolutiva                   |
+| **aula15** | Evals de memória — comparação com vs sem memória                   |
+
+---
+
 ## Como Executar os Projetos
 
 Navegue até a pasta do projeto desejado e siga as instruções específicas no README de cada projeto.
