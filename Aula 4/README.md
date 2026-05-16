@@ -11,6 +11,13 @@ Aula 4/
 ├── CriaLLM.txt/                     # Projeto entregável: runtime + agente de exemplo
 │   ├── runtime/                     # Motor do agente (Python)
 │   └── rota-monitor-agent/          # Agente de monitoramento de rotas (contratos + tools)
+├── GodotFramework/                  # Pipeline multi-agente para geração de jogos Godot 4
+│   ├── framework.py                 # Orquestrador CLI
+│   ├── agentes/                     # Diretor, Cena, Código, Correção, Patcher, Validador
+│   ├── utils/                       # Cliente LLM unificado (OpenAI / Ollama / Mock)
+│   └── output/                      # Projetos gerados
+│       ├── shoot_em_up_2d/          # Gerado pelo pipeline LLM
+│       └── truco_paulista/          # Truco Mineiro (criado manualmente)
 └── modulo04-agentes-autonomos/      # Evolução aula a aula (aula03 → aula15)
     ├── aula03-contratos/
     ├── aula04-runtime/
@@ -171,6 +178,67 @@ Fechar o ciclo com **evidência de que a memória está ajudando**: dataset de i
 | **Memória em 4 tipos**                         | Curta, longa, episódica e contextual com busca semântica por embeddings                   |
 | **Reflexão evolutiva**                         | Extração de lições de execuções passadas e injeção no contexto futuro                     |
 | **Evals como prática**                         | Benchmark de arquiteturas, tool selection eval, memory impact eval — tudo mensurável      |
+
+---
+
+## 🎮 GodotFramework — Pipeline Multi-Agente para Geração de Jogos
+
+Projeto extra construído durante a aula, que aplica o mesmo conceito de **agentes especializados em pipeline** em um domínio diferente: geração automática de jogos completos para a **Godot 4** a partir de uma frase em linguagem natural.
+
+### Como funciona
+
+```
+Descrição → Agente Diretor → Agente de Cena → Agente de Código → Projeto Godot pronto
+                                                    ↑
+                                          Patcher + Validador + Self-Healing
+```
+
+1. **Agente Diretor** — transforma a descrição em um JSON de arquitetura (cenas, nós, scripts)
+2. **Agente de Cena** — gera os arquivos `.tscn` em formato nativo da Godot 4
+3. **Agente de Código** — gera os scripts `.gd` (GDScript) com tipagem estática
+4. **Patcher** — corrige automaticamente padrões Godot 3→4 via regex, sem LLM
+5. **Validador** — cruza os `@onready` do script com os nós reais do `.tscn`
+6. **Self-Healing Agent** — corrige erros detectados pelo validador (até 2 tentativas)
+
+### Provedores suportados
+
+| Provedor       | Como ativar                                      |
+| -------------- | ------------------------------------------------ |
+| Ollama (local) | `LLM_PROVIDER=ollama` + `OLLAMA_MODEL=codellama` |
+| OpenAI         | `LLM_PROVIDER=openai` + `OPENAI_API_KEY=sk-...`  |
+| Mock (sem API) | não definir `LLM_PROVIDER`                       |
+
+### Jogos gerados
+
+**`output/shoot_em_up_2d/`** — gerado pelo pipeline LLM
+
+- Nave do jogador, 2 tipos de inimigos, projétil, power-up, leaderboard
+- 16 arquivos (`.tscn` + `.gd`) gerados automaticamente, incluindo autoloads detectados
+
+**`output/truco_paulista/`** — Truco Mineiro, criado manualmente como projeto-exemplo
+
+- Regras Mineiro: manilha variável pela vira, ordem ♦ < ♠ < ♥ < ♣
+- Layout circular de mesa (Parceiro no topo, Adv1/Adv2 nas laterais, Jogador na base)
+- IA conservadora (só pede truco com mão forte na 1ª rodada)
+- Escalada de apostas: Normal → Truco (3) → Seis → Nove → Doze (12)
+
+### Como executar
+
+```bash
+cd "Aula 4/GodotFramework"
+pip install -r requirements.txt
+
+# Gerar jogo com descrição direta
+python framework.py gerar --entrada "um shoot em up espacial com power-ups"
+
+# Modo entrevista interativa
+python framework.py gerar
+
+# Corrigir script com erro manualmente
+python framework.py corrigir --script output/meu_jogo/player.gd --log "Invalid NodePath"
+```
+
+> Documentação detalhada em [`GodotFramework/README.md`](GodotFramework/README.md)
 
 ---
 
