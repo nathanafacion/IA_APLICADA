@@ -175,6 +175,16 @@ Evolução incremental do runtime ao longo de 13 módulos:
 | **aula14** | Embeddings, busca semântica e reflexão evolutiva                   |
 | **aula15** | Evals de memória — comparação com vs sem memória                   |
 
+#### 📁 GodotFramework
+
+Pipeline multi-agente que transforma uma frase em linguagem natural em um projeto **Godot 4** completo — cenas `.tscn`, scripts `.gd` e `project.godot` — usando uma sequência de agentes especializados.
+
+- **Tecnologias:** Python, OpenAI / Ollama (codellama, qwen3:8b) / Mock, Godot 4 GDScript
+- **Agentes:** Diretor (arquitetura JSON) → Cena (`.tscn`) → Código (`.gd`) → Patcher (regex Godot 3→4) → Validador (`@onready` vs nós reais) → Self-Healing (autocorreção)
+- **Jogos gerados:**
+  - `output/shoot_em_up_2d/` — shoot em up espacial gerado 100% pelo pipeline LLM (nave, inimigos, power-ups, leaderboard)
+  - `output/truco_paulista/` — **Truco Mineiro** criado manualmente (manilha pela vira, layout circular de mesa, IA conservadora, escalada Normal → Truco → Seis → Nove → Doze)
+
 ---
 
 ## Como Executar os Projetos
