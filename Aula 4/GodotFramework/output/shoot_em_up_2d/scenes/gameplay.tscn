@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4444444444"]
+
+[ext_resource type="Script" path="res://game_manager.gd" id="1_gm"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_player"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+position = Vector2(0, 0)
+size = Vector2(1152, 648)
+color = Color(0.04, 0.04, 0.12, 1.0)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_gm")
+
+[node name="HUD" type="CanvasLayer" parent="GameManager"]
+
+[node name="ScoreLabel" type="Label" parent="GameManager/HUD"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 28
+text = "Pontos: 0"
+
+[node name="LivesLabel" type="Label" parent="GameManager/HUD"]
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 28
+text = "Vidas: 3"
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(576, 500)

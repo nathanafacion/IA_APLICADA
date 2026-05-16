@@ -1,0 +1,19 @@
+# Godot cache — gerado automaticamente pelo engine, não versionar
+output/**/.godot/
+**/.godot/
+
+# Godot import cache
+output/**/import/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Ambiente local
+.env
+
+# Backups do self-healing
+*.gd.bak

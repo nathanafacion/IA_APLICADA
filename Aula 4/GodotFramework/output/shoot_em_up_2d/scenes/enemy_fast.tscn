@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3333333333"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_enemy"]
+
+[sub_resource type="RectangleShape2D" id="RectShape1"]
+size = Vector2(22, 22)
+
+[node name="EnemyFast" type="CharacterBody2D"]
+script = ExtResource("1_enemy")
+speed = 280.0
+
+[node name="Shape" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 14, 11, -11, -11, -11)
+color = Color(1.0, 0.6, 0.0, 1.0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectShape1")

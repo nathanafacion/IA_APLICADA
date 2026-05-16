@@ -1,0 +1,75 @@
+{
+  "nome_do_jogo": "truco_paulista",
+  "cenas": [
+    {
+      "nome": "main_menu.tscn",
+      "tipo_raiz": "Control",
+      "filhos": [
+        { "nome": "Background", "tipo": "ColorRect" },
+        { "nome": "VBoxContainer", "tipo": "VBoxContainer" },
+        { "nome": "VBoxContainer/Titulo", "tipo": "Label" },
+        { "nome": "VBoxContainer/BtnJogar", "tipo": "Button" },
+        { "nome": "VBoxContainer/BtnSair", "tipo": "Button" }
+      ],
+      "script_associado": "scripts/main_menu.gd"
+    },
+    {
+      "nome": "gameplay.tscn",
+      "tipo_raiz": "Control",
+      "filhos": [
+        { "nome": "Background", "tipo": "ColorRect" },
+        { "nome": "Mesa", "tipo": "Node2D" },
+        { "nome": "Placar", "tipo": "Label" },
+        { "nome": "LabelVira", "tipo": "Label" },
+        { "nome": "LabelRodada", "tipo": "Label" },
+        { "nome": "LabelInfo", "tipo": "Label" },
+        { "nome": "ContainerMaoJogador", "tipo": "HBoxContainer" },
+        { "nome": "ContainerMesaCartas", "tipo": "HBoxContainer" },
+        { "nome": "ContainerBotoes", "tipo": "HBoxContainer" },
+        { "nome": "ContainerBotoes/BtnTruco", "tipo": "Button" },
+        { "nome": "ContainerBotoes/BtnAceitar", "tipo": "Button" },
+        { "nome": "ContainerBotoes/BtnFugir", "tipo": "Button" }
+      ],
+      "script_associado": "scripts/gameplay.gd"
+    },
+    {
+      "nome": "fim_de_jogo.tscn",
+      "tipo_raiz": "Control",
+      "filhos": [
+        { "nome": "Background", "tipo": "ColorRect" },
+        { "nome": "VBoxContainer", "tipo": "VBoxContainer" },
+        { "nome": "VBoxContainer/LabelResultado", "tipo": "Label" },
+        { "nome": "VBoxContainer/LabelPlacar", "tipo": "Label" },
+        { "nome": "VBoxContainer/BtnJogarNovamente", "tipo": "Button" },
+        { "nome": "VBoxContainer/BtnMenu", "tipo": "Button" }
+      ],
+      "script_associado": "scripts/fim_de_jogo.gd"
+    }
+  ],
+  "scripts": [
+    {
+      "nome": "scripts/baralho.gd",
+      "descricao": "Singleton. Gerencia o baralho de 40 cartas (sem 8, 9, 10). Define a ordem das cartas, calcula manilhas a partir da vira, embaralha e distribui cartas."
+    },
+    {
+      "nome": "scripts/gerenciador_jogo.gd",
+      "descricao": "Singleton. Controla todo o estado da partida: pontuação das duplas, estado do truco (normal/truco/seis/nove/doze), turno atual, resultado de rodadas e mãos."
+    },
+    {
+      "nome": "scripts/ia.gd",
+      "descricao": "Lógica de IA para os três jogadores computador. Decide qual carta jogar (prioriza manilhas para ganhar, descarta fracas para perder) e se pede/aceita truco."
+    },
+    {
+      "nome": "scripts/gameplay.gd",
+      "descricao": "Script principal da cena de jogo. Inicializa a mão, exibe cartas do jogador como botões clicáveis, processa turnos (jogador + 3 IAs em ordem), exibe cartas na mesa, resolve rodadas e mãos, gerencia botões de Truco/Aceitar/Fugir."
+    },
+    {
+      "nome": "scripts/main_menu.gd",
+      "descricao": "Conecta os botões Jogar (carrega gameplay.tscn) e Sair (encerra o jogo)."
+    },
+    {
+      "nome": "scripts/fim_de_jogo.gd",
+      "descricao": "Recebe pontuação final via GerenciadorJogo e exibe resultado. BtnJogarNovamente recarrega gameplay.tscn, BtnMenu volta ao menu principal."
+    }
+  ]
+}

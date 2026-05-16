@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1111111111"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_player"]
+
+[sub_resource type="RectangleShape2D" id="RectShape1"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 1
+collision_mask = 10
+script = ExtResource("1_player")
+
+[node name="Shape" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, -20, 16, 16, -16, 16)
+color = Color(0.2, 0.8, 1.0, 1.0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectShape1")
