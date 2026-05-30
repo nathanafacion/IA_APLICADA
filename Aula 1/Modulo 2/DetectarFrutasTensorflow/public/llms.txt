@@ -1,0 +1,6 @@
+# Site
+
+## Páginas (nextjs)
+
+- [Home](/): Pagina /
+- [Train](/train): Pagina /train

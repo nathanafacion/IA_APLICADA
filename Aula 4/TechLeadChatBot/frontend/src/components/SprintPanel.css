@@ -1,0 +1,58 @@
+.sprint-panel {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.sprint-panel__toggle {
+  background: #334155;
+  color: #94a3b8;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.sprint-panel__toggle:hover {
+  background: #475569;
+  color: #e2e8f0;
+}
+
+.sprint-panel__drawer {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sprint-panel__hint {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 10px;
+}
+
+.sprint-panel__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.88rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.sprint-panel__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}

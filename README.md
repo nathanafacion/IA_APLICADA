@@ -185,6 +185,16 @@ Pipeline multi-agente que transforma uma frase em linguagem natural em um projet
   - `output/shoot_em_up_2d/` — shoot em up espacial gerado 100% pelo pipeline LLM (nave, inimigos, power-ups, leaderboard)
   - `output/truco_paulista/` — **Truco Mineiro** criado manualmente (manilha pela vira, layout circular de mesa, IA conservadora, escalada Normal → Truco → Seis → Nove → Doze)
 
+#### 📁 TechLeadChatBot
+
+Agente especialista em Tech Lead com memória de longo prazo por sprint, observabilidade integrada e rastreamento de execuções.
+
+- **Tecnologias:** Python, FastAPI, LangGraph, Mem0, Langfuse (backend) · React + Vite (frontend)
+- **Modelo:** OpenAI GPT-4o
+- **Memória:** Mem0 armazena e recupera automaticamente contextos de sprints passadas por usuário (busca semântica)
+- **Observabilidade:** Langfuse registra cada execução — prompts, respostas, latência e custo de tokens
+- **Funcionalidades:** Chat especializado em planejamento, arquitetura e boas práticas de Tech Lead; contexto de sprint injetável; memória que evolui entre conversas
+
 ---
 
 ## Como Executar os Projetos

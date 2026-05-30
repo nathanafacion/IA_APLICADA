@@ -18,6 +18,9 @@ Aula 4/
 │   └── output/                      # Projetos gerados
 │       ├── shoot_em_up_2d/          # Gerado pelo pipeline LLM
 │       └── truco_paulista/          # Truco Mineiro (criado manualmente)
+├── TechLeadChatBot/                 # Agente especialista com memória de longo prazo por sprint
+│   ├── backend/                     # FastAPI + LangGraph + Mem0 + Langfuse
+│   └── frontend/                    # React + Vite
 └── modulo04-agentes-autonomos/      # Evolução aula a aula (aula03 → aula15)
     ├── aula03-contratos/
     ├── aula04-runtime/
@@ -243,6 +246,47 @@ Novo `memory_adapter.py` com 5 operações. O runtime continua agnóstico: lê `
 ### Aula 15 — Evals de memória e fechamento da Unidade 4
 
 Fechar o ciclo com **evidência de que a memória está ajudando**: dataset de impacto, suite com 6 métricas, comparação `com vs sem memória` e relatório gerado a cada execução. A flag `MEMORY_DISABLED=1` permite rodar o mesmo caso duas vezes para comparação direta. Pergunta central: _a memória instalada está realmente melhorando as decisões do agente?_
+
+---
+
+---
+
+## 🤖 TechLead ChatBot — Agente com Memória de Longo Prazo
+
+Agente especialista em Tech Lead com memória de longo prazo por sprint, observabilidade integrada e rastreamento de execuções.
+
+- **Stack:** Python, FastAPI, LangGraph, Mem0, Langfuse (backend) · React + Vite (frontend)
+- **Memória:** Mem0 armazena e recupera automaticamente contextos de sprints passadas por usuário
+- **Observabilidade:** Langfuse registra cada execução (prompts, respostas, latência, custo de tokens)
+- **Modelo:** OpenAI GPT-4o
+
+### Serviços
+
+| Serviço      | Papel                                                    |
+| ------------ | -------------------------------------------------------- |
+| **OpenAI**   | Modelo GPT-4o — inteligência conversacional              |
+| **Mem0**     | Memória de longo prazo por usuário (busca semântica)     |
+| **Langfuse** | Observabilidade e rastreamento de traces em produção     |
+
+### Como executar
+
+```bash
+# Backend
+cd TechLeadChatBot/backend
+cp .env.example .env  # preencher OPENAI_API_KEY, MEM0_API_KEY, LANGFUSE_*
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+# Frontend
+cd TechLeadChatBot/frontend
+cp .env.example .env
+npm install
+npm run dev
+```
+
+Acesse http://localhost:5173 · Use **📋 Contexto da Sprint** para fornecer dados da sprint atual.
+
+> Documentação detalhada em [`TechLeadChatBot/README.md`](TechLeadChatBot/README.md)
 
 ---
 
