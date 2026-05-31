@@ -14,7 +14,7 @@ Pós-Graduação em IA Aplicada oferecida pela UNIP.
 
 ## Estrutura do Repositório
 
-### Aula 1 / Módulo 2 - Detecção de Imagens
+### Modulo 1 / Aula 2 - Detecção de Imagens
 
 #### 📁 DetectarCartasComTeachablemachine
 
@@ -30,7 +30,7 @@ Projeto de classificação de frutas utilizando TensorFlow.
 - Tecnologias: Next.js, React, TensorFlow
 - Funcionalidade: Identificação e classificação de diferentes tipos de frutas
 
-### Aula 1 / Módulo 3 - Sistemas de Recomendação
+### Modulo 1 / Aula 3 - Sistemas de Recomendação
 
 #### 📁 RecomendaBoardgame
 
@@ -40,7 +40,7 @@ Sistema de recomendação de jogos de tabuleiro (board games) utilizando TensorF
 - Funcionalidade: Recomendações inteligentes baseadas em similaridade de cosseno
 - Características: Treinamento no navegador, persistência com IndexedDB, interface com autocomplete
 
-### Aula 1 / Módulo 4 - Detecção de Objetos em Tempo Real
+### Modulo 1 / Aula 4 - Detecção de Objetos em Tempo Real
 
 #### 📁 DetectaObjetos
 
@@ -50,7 +50,7 @@ Sistema de detecção de objetos em tempo real em vídeos utilizando COCO-SSD e 
 - Funcionalidade: Detecção de 80 classes de objetos (pessoas, animais, veículos, móveis, etc.)
 - Características: Processamento a 2 FPS, interface responsiva, estatísticas em tempo real, arquitetura modular
 
-### Aula 1 / Módulo 5,6 e 7 - Quiz de Matemática com IA
+### Modulo 1 / Aula 5, 6 e 7 - Quiz de Matemática com IA
 
 #### 📁 Quiz
 
@@ -59,7 +59,7 @@ O objetivo principal deste módulo foi aprender sobre Large Language Models (LLM
 - Tecnologias: Next.js, React, TypeScript, Tailwind CSS, Chart.js, Genkit, Ollama, mathjs
 - Funcionalidades: Geração automática de questões, 3 níveis de dificuldade, tópicos personalizáveis, validação rigorosa, gráficos de desempenho, explicações didáticas, arquitetura modular e integração com Genkit
 
-### Aula 1 / Módulo 8 - Gestor de Tarefas com FastMCP
+### Modulo 1 / Aula 8 - Gestor de Tarefas com FastMCP
 
 #### 📁 gestor_tarefas
 
@@ -68,7 +68,7 @@ Sistema completo de gestão de tarefas construído com FastMCP (Model Context Pr
 - Tecnologias: Python, FastMCP
 - Funcionalidades: Demonstração dos pilares MCP (Tools, Resources, Prompts), API para adicionar, listar, atualizar e remover tarefas, persistência automática das tarefas, documentação detalhada e exemplos de uso
 
-### Aula 1 / Módulo 9 e 10 - Busca RAG de Carros
+### Modulo 1 / Aula 9 e 10 - Busca RAG de Carros
 
 #### 📁 car-search
 
@@ -77,7 +77,7 @@ Aplicação de busca de carros por linguagem natural usando RAG (Retrieval-Augme
 - Tecnologias: Next.js, React, TypeScript, Neo4j, OpenRouter
 - Funcionalidades: Busca vetorial por similaridade, geração de resposta contextualizada por LLM, pipeline completo de RAG
 
-### Aula 2 — LangChain, LangGraph e Agentes de IA
+### Modulo 2 — LangChain, LangGraph e Agentes de IA
 
 #### 📁 Exemplos da Aula
 
@@ -113,7 +113,7 @@ Aplicação de agenda semanal com assistente conversacional em português, guard
 - Funcionalidades: Chat em linguagem natural para adicionar/remover eventos, grade semanal visual (07h–20h), detecção de conflitos de horário, nó de guardrails que filtra mensagens fora do escopo, exportação do calendário para PDF
 - Arquitetura: Grafo de estados `START → guardrails_check → (chat | blocked) → END`
 
-### Aula 3 — MCPs, Skills, Agents e Personalização do Copilot
+### Modulo 3 — MCPs, Skills, Agents e Personalização do Copilot
 
 #### 📁 Exemplos de Aula
 
@@ -143,7 +143,7 @@ Aplicação Next.js que analisa títulos e descrições de conteúdo usando dado
 - Funcionalidades: Análise de potencial viral de títulos, score 0-100 com feedback, sugestões de títulos otimizados por LLM, dashboard de tendências, gráficos interativos, 85 testes unitários e de integração
 - Arquitetura: Screaming Architecture organizada por features
 
-### Aula 4 — Agentes Autônomos: do Contrato ao Runtime
+### Modulo 4 — Agentes Autônomos: do Contrato ao Runtime
 
 Foco na construção de **agentes autônomos orientados a contratos** — o comportamento do agente é definido inteiramente por arquivos Markdown/YAML, e o runtime Python é agnóstico ao domínio. A aula cobre 13 módulos evolutivos (aula03 a aula15), partindo de contratos declarativos até memória semântica, reflexão evolutiva e evals mensuráveis.
 
@@ -155,7 +155,7 @@ Runtime de agentes autônomos baseado em contratos YAML declarados em arquivos M
 - **Conceito central:** Contract-Driven Agents — runtime agnóstico, contrato declarativo
 - **Funcionalidades:** Ciclo perceber → planejar → agir → avaliar, circuit breaker, telemetria, CLI completa (`rodar`, `validar`, `rastreamento`, `replay`, `analisar`, `benchmark`, `tool-eval`, `memory-eval`)
 
-#### 📁 modulo04-agentes-autonomos
+#### 📁 aula04-agentes-autonomos
 
 Evolução incremental do runtime ao longo de 13 módulos:
 
@@ -195,7 +195,7 @@ Agente especialista em Tech Lead com memória de longo prazo por sprint, observa
 - **Observabilidade:** Langfuse registra cada execução — prompts, respostas, latência e custo de tokens
 - **Funcionalidades:** Chat especializado em planejamento, arquitetura e boas práticas de Tech Lead; contexto de sprint injetável; memória que evolui entre conversas
 
-### Aula 5 — IA para UX: Engenharia de Requisitos com Agentes
+### Modulo 5 — IA para UX: Engenharia de Requisitos com Agentes
 
 Foco na aplicação de IA no processo de **UX e engenharia de requisitos** — usando agentes do GitHub Copilot para transformar descrições de problemas de negócio em especificações técnicas completas e visualmente estruturadas.
 

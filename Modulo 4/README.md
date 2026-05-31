@@ -262,11 +262,11 @@ Agente especialista em Tech Lead com memória de longo prazo por sprint, observa
 
 ### Serviços
 
-| Serviço      | Papel                                                    |
-| ------------ | -------------------------------------------------------- |
-| **OpenAI**   | Modelo GPT-4o — inteligência conversacional              |
-| **Mem0**     | Memória de longo prazo por usuário (busca semântica)     |
-| **Langfuse** | Observabilidade e rastreamento de traces em produção     |
+| Serviço      | Papel                                                |
+| ------------ | ---------------------------------------------------- |
+| **OpenAI**   | Modelo GPT-4o — inteligência conversacional          |
+| **Mem0**     | Memória de longo prazo por usuário (busca semântica) |
+| **Langfuse** | Observabilidade e rastreamento de traces em produção |
 
 ### Como executar
 
