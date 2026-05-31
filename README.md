@@ -195,6 +195,26 @@ Agente especialista em Tech Lead com memória de longo prazo por sprint, observa
 - **Observabilidade:** Langfuse registra cada execução — prompts, respostas, latência e custo de tokens
 - **Funcionalidades:** Chat especializado em planejamento, arquitetura e boas práticas de Tech Lead; contexto de sprint injetável; memória que evolui entre conversas
 
+### Aula 5 — IA para UX: Engenharia de Requisitos com Agentes
+
+Foco na aplicação de IA no processo de **UX e engenharia de requisitos** — usando agentes do GitHub Copilot para transformar descrições de problemas de negócio em especificações técnicas completas e visualmente estruturadas.
+
+#### 📁 AgenteUX
+
+Agente para o **GitHub Copilot Chat** que, dada uma descrição de problema ou cenário de UX, executa autonomamente uma pipeline de especificação técnica completa.
+
+| Passo                        | O que gera                                                         |
+| ---------------------------- | ------------------------------------------------------------------ |
+| 🎯 Escopo                    | Resumo do entendimento do problema e proposta da solução           |
+| ⚙️ Requisitos Funcionais     | Lista de RFs com verbos de ação, agrupados por módulo              |
+| 🔒 Requisitos Não-Funcionais | RNFs com métricas mensuráveis (performance, segurança, LGPD, etc.) |
+| 📊 Diagrama Mermaid          | Fluxograma do funcionamento da solução                             |
+| 💾 Arquivo `.md`             | Salva toda a especificação em um arquivo `especificacao-<tema>.md` |
+| 🖼️ Imagem do diagrama        | Gera e embute a imagem estática do diagrama via `mermaid.ink`      |
+
+- **Tecnologias:** GitHub Copilot Chat, VS Code, Mermaid
+- **Funcionalidades:** Geração automática de RFs e RNFs, diagramas de fluxo, exportação de especificação em Markdown
+
 ---
 
 ## Como Executar os Projetos
