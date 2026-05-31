@@ -1,4 +1,4 @@
-# Aula 3 — MCPs, Skills, Agents e Personalização do Copilot
+# Modulo 3 — MCPs, Skills, Agents e Personalização do Copilot
 
 Esta aula foca na construção e uso de **MCPs (Model Context Protocol)**, **Skills**, **Agents personalizados** e integração com **LangChain**, explorando o ecossistema de ferramentas para agentes de IA.
 
@@ -7,7 +7,7 @@ Esta aula foca na construção e uso de **MCPs (Model Context Protocol)**, **Ski
 ## 📂 Estrutura
 
 ```
-Aula 3/
+Modulo 3/
 ├── Exemplos de Aula/
 │   ├── 01-multiple-mcp-tools-template/
 │   ├── 01-multiple-mcp-tools-z/
@@ -21,7 +21,7 @@ Aula 3/
 │   ├── 07-api-security-auth-rate-limiting-z/
 │   ├── 08-publishing-mcps-private-npm/
 │   └── 09-using-mcp-with-langchain/
-└── Módulo 1,2,3/
+└── Aula 1,2,3/
     └── content-trends-analyzer/
 ```
 
@@ -97,7 +97,7 @@ Integração de MCP servers como ferramentas de agentes LangChain/LangGraph, dem
 
 ---
 
-## 📦 Módulos 1–3 — Projeto Prático
+## 📦 Aulas 1–3 — Projeto Prático
 
 ### Content Trends Analyzer
 

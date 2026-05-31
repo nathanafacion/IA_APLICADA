@@ -1,4 +1,4 @@
-# Aula 2 — LangChain, LangGraph e Agentes de IA
+# Modulo 2 — LangChain, LangGraph e Agentes de IA
 
 Esta aula aprofunda o uso de **LangChain** e **LangGraph** para construção de pipelines de IA, agentes com memória, guardrails de segurança e RAG avançado.
 
@@ -7,7 +7,7 @@ Esta aula aprofunda o uso de **LangChain** e **LangGraph** para construção de 
 ## 📂 Estrutura
 
 ```
-Aula 2/
+Modulo 2/
 ├── Exemplos da Aula/          # Exemplos práticos demonstrados em aula
 │   ├── 01-smart-model-router-gateway/
 │   ├── 02-langchain-intro/
@@ -20,7 +20,7 @@ Aula 2/
 │   ├── 06-rag-neo4j-students-template/
 │   ├── 06-rag-neo4j-students-z/
 │   └── 07-doc-analysis/
-└── Modulo 1,2,3,4,5/
+└── Aula 1,2,3,4,5/
     ├── LeitorRSS/             # Leitor RSS inteligente com IA
     └── WeeklyScheduler/       # Agenda semanal com assistente IA
 ```
@@ -84,7 +84,7 @@ Análise de documentos com LLM. Referências e links de estudo sobre Large Langu
 
 ---
 
-## 🗓️ Módulos 1–5 — Projetos Práticos
+## 🗓️ Aulas 1–5 — Projetos Práticos
 
 ### LeitorRSS — Leitor RSS Inteligente com IA
 
@@ -137,4 +137,4 @@ Configure o arquivo `.env` de cada projeto a partir do `.env.example` correspond
 
 ---
 
-_Materiais desenvolvidos como parte da Pós-Graduação em IA Aplicada — Aula 2_
+_Materiais desenvolvidos como parte da Pós-Graduação em IA Aplicada — Modulo 2_

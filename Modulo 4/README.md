@@ -1,4 +1,4 @@
-# Aula 4 — Agentes Autônomos: do Contrato ao Runtime
+# Modulo 4 — Agentes Autônomos: do Contrato ao Runtime
 
 Esta aula é focada na construção de **agentes autônomos orientados a contratos** — um paradigma onde o comportamento do agente é definido inteiramente por arquivos Markdown/YAML, e o runtime Python é agnóstico ao domínio. O aluno parte de contratos declarativos, abre o motor que os executa, adiciona observabilidade, múltiplas arquiteturas cognitivas, ferramentas reais, memória persistente e evals — tudo sem alterar o núcleo do runtime.
 
@@ -7,7 +7,7 @@ Esta aula é focada na construção de **agentes autônomos orientados a contrat
 ## 📂 Estrutura
 
 ```
-Aula 4/
+Modulo 4/
 ├── CriaLLM.txt/                     # Projeto entregável: runtime + agente de exemplo
 │   ├── runtime/                     # Motor do agente (Python)
 │   └── rota-monitor-agent/          # Agente de monitoramento de rotas (contratos + tools)
@@ -21,7 +21,7 @@ Aula 4/
 ├── TechLeadChatBot/                 # Agente especialista com memória de longo prazo por sprint
 │   ├── backend/                     # FastAPI + LangGraph + Mem0 + Langfuse
 │   └── frontend/                    # React + Vite
-└── modulo04-agentes-autonomos/      # Evolução aula a aula (aula03 → aula15)
+└── aula04-agentes-autonomos/      # Evolução aula a aula (aula03 → aula15)
     ├── aula03-contratos/
     ├── aula04-runtime/
     ├── aula05-observabilidade/
@@ -75,7 +75,7 @@ O agente exemplo (`rota-monitor-agent`) monitora a integridade de rotas de naveg
 ## 🚀 Como executar o CriaLLM
 
 ```bash
-cd "Aula 4/CriaLLM.txt/runtime"
+cd "Modulo 4/CriaLLM.txt/runtime"
 pip install -r requirements.txt
 
 # Rodar o agente (modo mock, sem chave de API)
@@ -136,7 +136,7 @@ Descrição → Agente Diretor → Agente de Cena → Agente de Código → Proj
 ## 🚀 Como executar o GodotFramework
 
 ```bash
-cd "Aula 4/GodotFramework"
+cd "Modulo 4/GodotFramework"
 pip install -r requirements.txt
 
 # Gerar jogo com descrição direta
@@ -153,7 +153,7 @@ python framework.py corrigir --script output/meu_jogo/player.gd --log "Invalid N
 
 ---
 
-## 📚 Módulos da Aula
+## 📚 Aulas do Módulo
 
 ### Aula 3 — Os 9 contratos
 
@@ -290,7 +290,7 @@ Acesse http://localhost:5173 · Use **📋 Contexto da Sprint** para fornecer da
 
 ---
 
-## 🔑 Conceitos-chave da Aula 4
+## 🔑 Conceitos-chave do Modulo 4
 
 | Conceito                                       | O que é                                                                                   |
 | ---------------------------------------------- | ----------------------------------------------------------------------------------------- |

@@ -1,4 +1,4 @@
-# Aula 1 - IA Aplicada
+# Modulo 1 - IA Aplicada
 
 ## 📚 Ementa
 
@@ -16,39 +16,39 @@ Estudo dos fundamentos teóricos e práticos da Inteligência Artificial, Machin
 
 ## 📂 Projetos
 
-### Módulo 2 - Detecção de Imagens
+### Aula 2 - Detecção de Imagens
 
-- **[DetectarCartasComTeachablemachine](Modulo%202/DetectarCartasComTeachablemachine/)** - Detector de Cartas de Truco com TensorFlow.js e Teachable Machine
-- **[DetectarFrutasTensorflow](Modulo%202/DetectarFrutasTensorflow/)** - Detector de Frutas com TensorFlow.js
+- **[DetectarCartasComTeachablemachine](Aula%202/DetectarCartasComTeachablemachine/)** - Detector de Cartas de Truco com TensorFlow.js e Teachable Machine
+- **[DetectarFrutasTensorflow](Aula%202/DetectarFrutasTensorflow/)** - Detector de Frutas com TensorFlow.js
 
-### Módulo 3 - Sistemas de Recomendação
+### Aula 3 - Sistemas de Recomendação
 
-- **[RecomendaBoardgame](Modulo%203/RecomendaBoardgame/)** - Sistema de Recomendação de Jogos de Tabuleiro com TensorFlow.js e Next.js
+- **[RecomendaBoardgame](Aula%203/RecomendaBoardgame/)** - Sistema de Recomendação de Jogos de Tabuleiro com TensorFlow.js e Next.js
 
-### Módulo 4 - Detecção de Objetos em Tempo Real
+### Aula 4 - Detecção de Objetos em Tempo Real
 
-- **[DetectaObjetos](Modulo%204/DetectaObjetos/)** - Sistema de Detecção de Objetos em Vídeo com COCO-SSD e TensorFlow.js
+- **[DetectaObjetos](Aula%204/DetectaObjetos/)** - Sistema de Detecção de Objetos em Vídeo com COCO-SSD e TensorFlow.js
 
-### Módulo 5, 6 e 7 - Quiz de Matemática com IA
+### Aula 5, 6 e 7 - Quiz de Matemática com IA
 
-- **[Quiz](Modulo%206/Quiz/)** - Aplicação web de quiz de matemática com geração de questões por IA local (Ollama + Genkit), validação matemática robusta e gráficos interativos.
+- **[Quiz](Aula%205,%206%20e%207/Quiz/)** - Aplicação web de quiz de matemática com geração de questões por IA local (Ollama + Genkit), validação matemática robusta e gráficos interativos.
   - Geração automática de questões de matemática por IA local
   - 3 níveis de dificuldade e tópicos personalizáveis
   - Validação rigorosa das questões
   - Gráficos de desempenho e explicações didáticas
   - Arquitetura modular e integração com Genkit
 
-### Módulo 8 - Gestor de Tarefas com FastMCP
+### Aula 8 - Gestor de Tarefas com FastMCP
 
-- **[gestor_tarefas](Modulo%208/gestor_tarefas/)** - Sistema completo de gestão de tarefas construído com FastMCP (Model Context Protocol).
+- **[gestor_tarefas](Aula%208/gestor_tarefas/)** - Sistema completo de gestão de tarefas construído com FastMCP (Model Context Protocol).
   - Demonstração dos pilares MCP: Tools, Resources e Prompts
   - API para adicionar, listar, atualizar e remover tarefas
   - Persistência automática das tarefas
   - Documentação detalhada e exemplos de uso
 
-### Módulo 9 e 10 - Busca RAG de Carros
+### Aula 9 e 10 - Busca RAG de Carros
 
-- **[car-search](Modulo%209%20e%2010/car-search/)** - Aplicação de busca de carros por linguagem natural usando RAG (Retrieval-Augmented Generation), Neo4j, embeddings e LLM via OpenRouter.
+- **[car-search](Aula%209%20e%2010/car-search/)** - Aplicação de busca de carros por linguagem natural usando RAG (Retrieval-Augmented Generation), Neo4j, embeddings e LLM via OpenRouter.
   - Busca vetorial por similaridade de consulta
   - Geração de resposta contextualizada por LLM
   - Pipeline completo de RAG: Retrieval, Augmented, Generation
