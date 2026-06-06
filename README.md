@@ -215,6 +215,17 @@ Agente para o **GitHub Copilot Chat** que, dada uma descrição de problema ou c
 - **Tecnologias:** GitHub Copilot Chat, VS Code, Mermaid
 - **Funcionalidades:** Geração automática de RFs e RNFs, diagramas de fluxo, exportação de especificação em Markdown
 
+#### 📁 TemplateReactComSpecDriven
+
+Exemplo prático completo de **Spec-Driven Development (SDD)** usando o [Spec Kit](https://github.com/github/spec-kit) — toolkit open source do GitHub — para guiar a construção de uma aplicação React/Next.js com TypeScript seguindo o processo de especificação antes da implementação.
+
+O repositório demonstra o fluxo completo do SDD: constitution → specify → plan → tasks → implement, com todos os artefatos gerados e o código resultante de um **Todo App** como exemplo didático.
+
+- **Tecnologias:** Next.js 16, React 19, TypeScript, Tailwind CSS, Spec Kit (specify-cli), GitHub Copilot
+- **Artefatos SDD gerados:** `constitution.md`, `spec.md`, `plan.md`, `tasks.md` em `specs/001-todo-app/`
+- **Funcionalidades do Todo App:** CRUD de tarefas, filtros por status, contador de pendentes, persistência via localStorage, TypeScript strict mode, componentes reutilizáveis
+- **Slash commands disponíveis:** `/speckit.constitution`, `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`, `/speckit.clarify`, `/speckit.analyze`, `/speckit.checklist`
+
 ---
 
 ## Como Executar os Projetos
